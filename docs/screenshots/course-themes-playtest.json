@@ -1,0 +1,1650 @@
+{
+  "success": true,
+  "errors": [],
+  "checks": {
+    "jumps": [
+      {
+        "stage": "slalom",
+        "index": 1,
+        "flying": {
+          "id": 0,
+          "s": 2781.3842360013155,
+          "x": -2.869565217391255,
+          "yaw": 0,
+          "speed": 141.0437141607559,
+          "laps": 0,
+          "checkpoint": 5,
+          "item": null,
+          "boost": 0,
+          "energy": 100,
+          "drifting": false,
+          "driftCharge": 0,
+          "driftTier": 0,
+          "markerPenalty": false,
+          "markerStreak": 0,
+          "markerPassed": 0,
+          "markerMissed": 0,
+          "pitch": 0.28196384435925853,
+          "flightTilted": false,
+          "dropFlight": false,
+          "recovery": 0,
+          "position": [
+            -542.8695652173913,
+            182.9267353456096,
+            -1253.9525333150295
+          ],
+          "airborne": 0.151,
+          "airHeight": 11.196162064225813,
+          "hoverHeight": 1.8471909020355033,
+          "hoverVelocity": -0.0360707309145276,
+          "aiPace": 1,
+          "launches": 1,
+          "finish": null
+        },
+        "landed": {
+          "id": 0,
+          "s": 2999.118640431126,
+          "x": -2.869565217391255,
+          "yaw": 0,
+          "speed": 131.1969416598146,
+          "laps": 0,
+          "checkpoint": 6,
+          "item": null,
+          "boost": 0,
+          "energy": 100,
+          "drifting": false,
+          "driftCharge": 0,
+          "driftTier": 0,
+          "markerPenalty": false,
+          "markerStreak": 0,
+          "markerPassed": 0,
+          "markerMissed": 0,
+          "pitch": 0,
+          "flightTilted": false,
+          "dropFlight": false,
+          "recovery": 0,
+          "position": [
+            -542.8695652173913,
+            140.2933822475833,
+            -1461.1313344365774
+          ],
+          "airborne": 0,
+          "airHeight": 0,
+          "hoverHeight": 1.4903016712145625,
+          "hoverVelocity": -5.980683389048057,
+          "aiPace": 1,
+          "launches": 1,
+          "finish": null
+        }
+      },
+      {
+        "stage": "rift",
+        "index": 1,
+        "flying": {
+          "id": 0,
+          "s": 1580.7036914211697,
+          "x": -3.764388683358887,
+          "yaw": -0.0024908232221183403,
+          "speed": 142.2553133447697,
+          "laps": 0,
+          "checkpoint": 3,
+          "item": null,
+          "boost": 0,
+          "energy": 100,
+          "drifting": false,
+          "driftCharge": 0,
+          "driftTier": 0,
+          "markerPenalty": false,
+          "markerStreak": 0,
+          "markerPassed": 0,
+          "markerMissed": 0,
+          "pitch": 0.289195778897277,
+          "flightTilted": false,
+          "dropFlight": false,
+          "recovery": 0,
+          "position": [
+            -653.2366537923098,
+            273.121160324552,
+            -1217.3897770644085
+          ],
+          "airborne": 0.11766666666666666,
+          "airHeight": 9.977028127193988,
+          "hoverHeight": 1.8477920808840786,
+          "hoverVelocity": -0.025844242102910173,
+          "aiPace": 1,
+          "launches": 1,
+          "finish": null
+        },
+        "landed": {
+          "id": 0,
+          "s": 1830.200999123602,
+          "x": -3.282673527449761,
+          "yaw": 0.0006012067125192575,
+          "speed": 132.2878712712804,
+          "laps": 0,
+          "checkpoint": 4,
+          "item": null,
+          "boost": 0,
+          "energy": 100,
+          "drifting": false,
+          "driftCharge": 0,
+          "driftTier": 0,
+          "markerPenalty": false,
+          "markerStreak": 0,
+          "markerPassed": 0,
+          "markerMissed": 0,
+          "pitch": 0,
+          "flightTilted": false,
+          "dropFlight": false,
+          "recovery": 0,
+          "position": [
+            -644.3676948525148,
+            231.0162015868303,
+            -1458.7610364804743
+          ],
+          "airborne": 0,
+          "airHeight": 0,
+          "hoverHeight": 1.4473177876454972,
+          "hoverVelocity": -4.3481304524536135,
+          "aiPace": 1,
+          "launches": 1,
+          "finish": null
+        }
+      },
+      {
+        "stage": "rift",
+        "index": 2,
+        "flying": {
+          "id": 0,
+          "s": 2435.976893626239,
+          "x": -4.1991100733529505,
+          "yaw": -0.005103037197217822,
+          "speed": 141.75699407321122,
+          "laps": 0,
+          "checkpoint": 6,
+          "item": null,
+          "boost": 0,
+          "energy": 100,
+          "drifting": false,
+          "driftCharge": 0,
+          "driftTier": 0,
+          "markerPenalty": false,
+          "markerStreak": 0,
+          "markerPassed": 0,
+          "markerMissed": 0,
+          "pitch": 0.3016835516246735,
+          "flightTilted": false,
+          "dropFlight": false,
+          "recovery": 0,
+          "position": [
+            -644.7227818055653,
+            243.7373295388719,
+            -2069.619762782975
+          ],
+          "airborne": 0.13433333333333333,
+          "airHeight": 10.805574014582225,
+          "hoverHeight": 1.8477920808840786,
+          "hoverVelocity": -0.025844242102910173,
+          "aiPace": 1,
+          "launches": 1,
+          "finish": null
+        },
+        "landed": {
+          "id": 0,
+          "s": 2694.522303137412,
+          "x": -3.158219600573089,
+          "yaw": 0.0016125421166945729,
+          "speed": 132.70069959444086,
+          "laps": 0,
+          "checkpoint": 7,
+          "item": null,
+          "boost": 0,
+          "energy": 100,
+          "drifting": false,
+          "driftCharge": 0,
+          "driftTier": 0,
+          "markerPenalty": false,
+          "markerStreak": 0,
+          "markerPassed": 0,
+          "markerMissed": 0,
+          "pitch": 0,
+          "flightTilted": false,
+          "dropFlight": false,
+          "recovery": 0,
+          "position": [
+            -622.6361538742455,
+            200.06102953908672,
+            -2318.921405908101
+          ],
+          "airborne": 0,
+          "airHeight": 0,
+          "hoverHeight": 0.8433581509556366,
+          "hoverVelocity": -2.7333333333333343,
+          "aiPace": 1,
+          "launches": 1,
+          "finish": null
+        }
+      },
+      {
+        "stage": "rift",
+        "index": 3,
+        "flying": {
+          "id": 0,
+          "s": 3359.210114604675,
+          "x": -1.9284309279885776,
+          "yaw": 0.005359915938602304,
+          "speed": 142.3881217217924,
+          "laps": 0,
+          "checkpoint": 9,
+          "item": null,
+          "boost": 0,
+          "energy": 100,
+          "drifting": false,
+          "driftCharge": 0,
+          "driftTier": 0,
+          "markerPenalty": false,
+          "markerStreak": 0,
+          "markerPassed": 0,
+          "markerMissed": 0,
+          "pitch": 0.30053801780094674,
+          "flightTilted": false,
+          "dropFlight": false,
+          "recovery": 0,
+          "position": [
+            -624.9508260444925,
+            213.26676077138595,
+            -2987.3964170049
+          ],
+          "airborne": 0.11766666666666666,
+          "airHeight": 9.986509947800952,
+          "hoverHeight": 1.8477920808840786,
+          "hoverVelocity": -0.025844242102910173,
+          "aiPace": 1,
+          "launches": 1,
+          "finish": null
+        },
+        "landed": {
+          "id": 0,
+          "s": 3664.771237834773,
+          "x": -4.512850351117266,
+          "yaw": -0.00048363660166080144,
+          "speed": 184.99622062671514,
+          "laps": 0,
+          "checkpoint": 10,
+          "item": null,
+          "boost": 0.2833333333333332,
+          "energy": 100,
+          "drifting": false,
+          "driftCharge": 0,
+          "driftTier": 0,
+          "markerPenalty": false,
+          "markerStreak": 0,
+          "markerPassed": 0,
+          "markerMissed": 0,
+          "pitch": 0,
+          "flightTilted": false,
+          "dropFlight": false,
+          "recovery": 0,
+          "position": [
+            -648.8233573759497,
+            170.5138491288203,
+            -3284.875908097148
+          ],
+          "airborne": 0,
+          "airHeight": 0,
+          "hoverHeight": 0.9792868943908596,
+          "hoverVelocity": -5.933333333333334,
+          "aiPace": 1,
+          "launches": 1,
+          "finish": null
+        }
+      },
+      {
+        "stage": "vortex",
+        "index": 1,
+        "flying": {
+          "id": 0,
+          "s": 2444.5429174398996,
+          "x": -2.7584876270546226,
+          "yaw": 0.0021682659518269237,
+          "speed": 141.97276192679283,
+          "laps": 0,
+          "checkpoint": 4,
+          "item": null,
+          "boost": 0,
+          "energy": 100,
+          "drifting": false,
+          "driftCharge": 0,
+          "driftTier": 0,
+          "markerPenalty": false,
+          "markerStreak": 0,
+          "markerPassed": 0,
+          "markerMissed": 0,
+          "pitch": 0.28782614394630984,
+          "flightTilted": false,
+          "dropFlight": false,
+          "recovery": 0,
+          "position": [
+            -763.4042287376054,
+            368.7542448475585,
+            -1299.7069727520666
+          ],
+          "airborne": 0.13433333333333333,
+          "airHeight": 10.65255392261419,
+          "hoverHeight": 1.8477920808840786,
+          "hoverVelocity": -0.025844242102910173,
+          "aiPace": 1,
+          "launches": 1,
+          "finish": null
+        },
+        "landed": {
+          "id": 0,
+          "s": 2701.721614316983,
+          "x": -3.045085182361744,
+          "yaw": -0.0006310883040297091,
+          "speed": 131.25308401450212,
+          "laps": 0,
+          "checkpoint": 5,
+          "item": null,
+          "boost": 0,
+          "energy": 100,
+          "drifting": false,
+          "driftCharge": 0,
+          "driftTier": 0,
+          "markerPenalty": false,
+          "markerStreak": 0,
+          "markerPassed": 0,
+          "markerMissed": 0,
+          "pitch": 0,
+          "flightTilted": false,
+          "dropFlight": false,
+          "recovery": 0,
+          "position": [
+            -773.9721046107804,
+            326.38824964846805,
+            -1550.1039981879014
+          ],
+          "airborne": 0,
+          "airHeight": 0,
+          "hoverHeight": 1.1684439127286217,
+          "hoverVelocity": -4.866666666666667,
+          "aiPace": 1,
+          "launches": 1,
+          "finish": null
+        }
+      },
+      {
+        "stage": "oblivion",
+        "index": 1,
+        "flying": {
+          "id": 0,
+          "s": 3185.878861175643,
+          "x": -3.7437061619754295,
+          "yaw": -0.0029721638651166,
+          "speed": 143.6629127286488,
+          "laps": 0,
+          "checkpoint": 4,
+          "item": null,
+          "boost": 0,
+          "energy": 100,
+          "drifting": false,
+          "driftCharge": 0,
+          "driftTier": 0,
+          "markerPenalty": false,
+          "markerStreak": 0,
+          "markerPassed": 0,
+          "markerMissed": 0,
+          "pitch": 0.3274846941431101,
+          "flightTilted": false,
+          "dropFlight": false,
+          "recovery": 0,
+          "position": [
+            -923.0748941555389,
+            529.1126409719154,
+            -1297.3725001828204
+          ],
+          "airborne": 0.11766666666666666,
+          "airHeight": 10.576307059784043,
+          "hoverHeight": 1.8477920808840786,
+          "hoverVelocity": -0.025844242102910173,
+          "aiPace": 1,
+          "launches": 1,
+          "finish": null
+        },
+        "landed": {
+          "id": 0,
+          "s": 3551.566985461897,
+          "x": -1.3457637440276031,
+          "yaw": 0.000350167539217426,
+          "speed": 140,
+          "laps": 0,
+          "checkpoint": 5,
+          "item": null,
+          "boost": 0,
+          "energy": 100,
+          "drifting": false,
+          "driftCharge": 0,
+          "driftTier": 0,
+          "markerPenalty": false,
+          "markerStreak": 0,
+          "markerPassed": 0,
+          "markerMissed": 0,
+          "pitch": 0,
+          "flightTilted": false,
+          "dropFlight": false,
+          "recovery": 0,
+          "position": [
+            -906.8048701659809,
+            487.6942068033946,
+            -1656.1290033184857
+          ],
+          "airborne": 0,
+          "airHeight": 0,
+          "hoverHeight": 1.1683787758250768,
+          "hoverVelocity": -3.1233747147451147,
+          "aiPace": 1,
+          "launches": 1,
+          "finish": null
+        }
+      },
+      {
+        "stage": "oblivion",
+        "index": 2,
+        "flying": {
+          "id": 0,
+          "s": 4039.9219608339117,
+          "x": -4.128111287921632,
+          "yaw": -0.0061766574114688845,
+          "speed": 144.02165703553752,
+          "laps": 0,
+          "checkpoint": 6,
+          "item": null,
+          "boost": 0,
+          "energy": 100,
+          "drifting": false,
+          "driftCharge": 0,
+          "driftTier": 0,
+          "markerPenalty": false,
+          "markerStreak": 0,
+          "markerPassed": 0,
+          "markerMissed": 0,
+          "pitch": 0.32625487505199763,
+          "flightTilted": false,
+          "dropFlight": false,
+          "recovery": 0,
+          "position": [
+            -908.6367284660863,
+            498.9741520451025,
+            -2149.21499233937
+          ],
+          "airborne": 0.11766666666666666,
+          "airHeight": 10.676742746131211,
+          "hoverHeight": 1.8471909020355033,
+          "hoverVelocity": -0.0360707309145276,
+          "aiPace": 1,
+          "launches": 1,
+          "finish": null
+        },
+        "landed": {
+          "id": 0,
+          "s": 4329.027293423347,
+          "x": -3.138093298883559,
+          "yaw": 0.001171002632041776,
+          "speed": 130.3595276636453,
+          "laps": 0,
+          "checkpoint": 7,
+          "item": null,
+          "boost": 0,
+          "energy": 100,
+          "drifting": false,
+          "driftCharge": 0,
+          "driftTier": 0,
+          "markerPenalty": false,
+          "markerStreak": 0,
+          "markerPassed": 0,
+          "markerMissed": 0,
+          "pitch": 0,
+          "flightTilted": false,
+          "dropFlight": false,
+          "recovery": 0,
+          "position": [
+            -880.5409844157737,
+            456.2349827005527,
+            -2430.2499460227687
+          ],
+          "airborne": 0,
+          "airHeight": 0,
+          "hoverHeight": 1.2308948059875287,
+          "hoverVelocity": -4.894111388783861,
+          "aiPace": 1,
+          "launches": 1,
+          "finish": null
+        }
+      },
+      {
+        "stage": "oblivion",
+        "index": 3,
+        "flying": {
+          "id": 0,
+          "s": 4965.292795482711,
+          "x": -1.7364919817560267,
+          "yaw": 0.0047342737397554095,
+          "speed": 143.92413547566196,
+          "laps": 0,
+          "checkpoint": 9,
+          "item": null,
+          "boost": 0,
+          "energy": 100,
+          "drifting": false,
+          "driftCharge": 0,
+          "driftTier": 0,
+          "markerPenalty": false,
+          "markerStreak": 0,
+          "markerPassed": 0,
+          "markerMissed": 0,
+          "pitch": 0.3453540839618614,
+          "flightTilted": false,
+          "dropFlight": false,
+          "recovery": 0,
+          "position": [
+            -883.0375518634856,
+            470.11391415394826,
+            -3069.7803398829224
+          ],
+          "airborne": 0.13433333333333333,
+          "airHeight": 11.813486712216141,
+          "hoverHeight": 1.8477920808840786,
+          "hoverVelocity": -0.025844242102910173,
+          "aiPace": 1,
+          "launches": 1,
+          "finish": null
+        },
+        "landed": {
+          "id": 0,
+          "s": 5345.3716404834695,
+          "x": -5.723936521481622,
+          "yaw": 1.6809452799415925e-11,
+          "speed": 140,
+          "laps": 0,
+          "checkpoint": 10,
+          "item": null,
+          "boost": 0,
+          "energy": 100,
+          "drifting": false,
+          "driftCharge": 0,
+          "driftTier": 0,
+          "markerPenalty": false,
+          "markerStreak": 0,
+          "markerPassed": 0,
+          "markerMissed": 0,
+          "pitch": 0,
+          "flightTilted": false,
+          "dropFlight": false,
+          "recovery": 0,
+          "position": [
+            -913.6823163859146,
+            427.153878900564,
+            -3442.1108944063867
+          ],
+          "airborne": 0,
+          "airHeight": 0,
+          "hoverHeight": 1.4106328009747606,
+          "hoverVelocity": -7,
+          "aiPace": 1,
+          "launches": 1,
+          "finish": null
+        }
+      },
+      {
+        "stage": "oblivion",
+        "index": 4,
+        "flying": {
+          "id": 0,
+          "s": 5886.84654296532,
+          "x": -3.277413416279077,
+          "yaw": -0.0049532715652730545,
+          "speed": 144.9715128774067,
+          "laps": 0,
+          "checkpoint": 11,
+          "item": null,
+          "boost": 0,
+          "energy": 100,
+          "drifting": false,
+          "driftCharge": 0,
+          "driftTier": 0,
+          "markerPenalty": false,
+          "markerStreak": 0,
+          "markerPassed": 0,
+          "markerMissed": 0,
+          "pitch": 0.3647521750106478,
+          "flightTilted": false,
+          "dropFlight": false,
+          "recovery": 0,
+          "position": [
+            -908.1413854581684,
+            439.81936587990367,
+            -3987.382323406655
+          ],
+          "airborne": 0.11766666666666666,
+          "airHeight": 11.179525472379757,
+          "hoverHeight": 1.8477920808840786,
+          "hoverVelocity": -0.025844242102910173,
+          "aiPace": 1,
+          "launches": 1,
+          "finish": null
+        },
+        "landed": {
+          "id": 0,
+          "s": 6292.849470201997,
+          "x": 0.7324945136749279,
+          "yaw": 0.0004945215637618608,
+          "speed": 140,
+          "laps": 0,
+          "checkpoint": 12,
+          "item": null,
+          "boost": 0,
+          "energy": 100,
+          "drifting": false,
+          "driftCharge": 0,
+          "driftTier": 0,
+          "markerPenalty": false,
+          "markerStreak": 0,
+          "markerPassed": 0,
+          "markerMissed": 0,
+          "pitch": 0,
+          "flightTilted": false,
+          "dropFlight": false,
+          "recovery": 0,
+          "position": [
+            -877.7088364106744,
+            397.58254573715334,
+            -4385.852129337306
+          ],
+          "airborne": 0,
+          "airHeight": 0,
+          "hoverHeight": 1.3766799420291558,
+          "hoverVelocity": -4.355345875085084,
+          "aiPace": 1,
+          "launches": 1,
+          "finish": null
+        }
+      }
+    ],
+    "themes": [
+      {
+        "stage": "slalom",
+        "theme": "Banked hairpins · Drift exits · Neon district",
+        "skyline": {
+          "buildings": 85,
+          "nearby": 15
+        },
+        "gaps": 1,
+        "pipes": 1
+      },
+      {
+        "stage": "rift",
+        "theme": "3 offset jumps · Air rings · Amber canyon",
+        "skyline": {
+          "buildings": 85,
+          "nearby": 14
+        },
+        "gaps": 3,
+        "pipes": 1
+      },
+      {
+        "stage": "vortex",
+        "theme": "3 tunnels · Wall boost chains · Orbital ramps",
+        "skyline": {
+          "buildings": 85,
+          "nearby": 15
+        },
+        "gaps": 1,
+        "pipes": 3
+      },
+      {
+        "stage": "oblivion",
+        "theme": "4 jumps · Banked turns · Reactor gauntlet",
+        "skyline": {
+          "buildings": 85,
+          "nearby": 14
+        },
+        "gaps": 4,
+        "pipes": 3
+      }
+    ],
+    "windows": {
+      "windows": 12,
+      "previous": 24,
+      "lit": 3
+    },
+    "drift": {
+      "phase": "racing",
+      "stage": "slalom",
+      "drop": null,
+      "pipe": {
+        "start": 3518.0561245789413,
+        "end": 4447.142230819322,
+        "radius": 28
+      },
+      "pipes": [
+        {
+          "start": 3518.0561245789413,
+          "end": 4447.142230819322,
+          "radius": 28
+        }
+      ],
+      "gaps": [
+        {
+          "start": 2764.404307001461,
+          "end": 2903.018183180154,
+          "landingEnd": 3237.979299229273,
+          "width": 33,
+          "lift": 42
+        }
+      ],
+      "markers": [
+        {
+          "id": 0,
+          "s": 220,
+          "x": 0,
+          "side": "left"
+        },
+        {
+          "id": 1,
+          "s": 382,
+          "x": 0,
+          "side": "right"
+        },
+        {
+          "id": 2,
+          "s": 544,
+          "x": 0,
+          "side": "left"
+        },
+        {
+          "id": 3,
+          "s": 706,
+          "x": 0,
+          "side": "right"
+        },
+        {
+          "id": 4,
+          "s": 868,
+          "x": 0,
+          "side": "left"
+        },
+        {
+          "id": 5,
+          "s": 1030,
+          "x": 0,
+          "side": "right"
+        },
+        {
+          "id": 6,
+          "s": 1192,
+          "x": 0,
+          "side": "left"
+        },
+        {
+          "id": 7,
+          "s": 1354,
+          "x": 0,
+          "side": "right"
+        },
+        {
+          "id": 8,
+          "s": 1516,
+          "x": 0,
+          "side": "left"
+        },
+        {
+          "id": 9,
+          "s": 1678,
+          "x": 0,
+          "side": "right"
+        },
+        {
+          "id": 10,
+          "s": 1840,
+          "x": 0,
+          "side": "left"
+        },
+        {
+          "id": 11,
+          "s": 2002,
+          "x": 0,
+          "side": "right"
+        },
+        {
+          "id": 12,
+          "s": 2164,
+          "x": 0,
+          "side": "left"
+        },
+        {
+          "id": 13,
+          "s": 2326,
+          "x": 0,
+          "side": "right"
+        },
+        {
+          "id": 14,
+          "s": 2488,
+          "x": 0,
+          "side": "left"
+        },
+        {
+          "id": 15,
+          "s": 9466.957828734812,
+          "x": 0,
+          "side": "right"
+        },
+        {
+          "id": 16,
+          "s": 9628.957828734812,
+          "x": 0,
+          "side": "left"
+        },
+        {
+          "id": 17,
+          "s": 9790.957828734812,
+          "x": 0,
+          "side": "right"
+        },
+        {
+          "id": 18,
+          "s": 9952.957828734812,
+          "x": 0,
+          "side": "left"
+        }
+      ],
+      "barriers": [
+        {
+          "id": 0,
+          "s": 290,
+          "x": -8.5,
+          "width": 6,
+          "height": 5,
+          "length": 7
+        },
+        {
+          "id": 1,
+          "s": 669.0673845002434,
+          "x": 8.5,
+          "width": 6,
+          "height": 5,
+          "length": 7
+        },
+        {
+          "id": 2,
+          "s": 1048.1347690004868,
+          "x": 8.5,
+          "width": 6,
+          "height": 5,
+          "length": 7
+        },
+        {
+          "id": 3,
+          "s": 1427.2021535007304,
+          "x": 8.5,
+          "width": 6,
+          "height": 5,
+          "length": 7
+        },
+        {
+          "id": 4,
+          "s": 1806.2695380009739,
+          "x": -8.5,
+          "width": 6,
+          "height": 5,
+          "length": 7
+        },
+        {
+          "id": 5,
+          "s": 2185.3369225012175,
+          "x": -8.5,
+          "width": 6,
+          "height": 5,
+          "length": 7
+        },
+        {
+          "id": 6,
+          "s": 3928.0561245789413,
+          "x": -87.94689145077133,
+          "width": 7,
+          "height": 4,
+          "length": 8
+        }
+      ],
+      "exterior": {
+        "radius": 28,
+        "spiralStart": 3438.0561245789413,
+        "spiralEnd": 4527.142230819322,
+        "loopStart": 4870.752433392228,
+        "loopEnd": 6280.88225943192,
+        "descentStart": 6720.264973358568,
+        "descentEnd": 9339.035256860365
+      },
+      "ramps": [
+        {
+          "s": 2764.404307001461,
+          "x": 0,
+          "length": 48,
+          "width": 60,
+          "height": 5
+        },
+        {
+          "s": 4690.752433392228,
+          "x": 44,
+          "length": 38,
+          "width": 16,
+          "height": 5
+        }
+      ],
+      "flats": [
+        {
+          "center": 0,
+          "length": 260,
+          "transition": 100,
+          "name": "GRID / POWER UP"
+        },
+        {
+          "center": 1382.2021535007304,
+          "length": 2704.404307001461,
+          "transition": 110,
+          "name": "DRIFT ALLEY / MARKER SLALOM"
+        },
+        {
+          "center": 3001.191803115367,
+          "length": 833.5749922278119,
+          "transition": 100,
+          "name": "SKY JUMP / AIM FOR THE DECK"
+        },
+        {
+          "center": 8029.650115109466,
+          "length": 2618.770283501797,
+          "transition": 180,
+          "name": "SWITCHBACK / DRIFT LINE"
+        },
+        {
+          "center": 9896.957828734812,
+          "length": 480,
+          "transition": 180,
+          "name": "HOME STRAIGHT / MARKER SLALOM"
+        }
+      ],
+      "banks": [
+        {
+          "start": 280,
+          "end": 2282.592821843824
+        },
+        {
+          "start": 6820.264973358568,
+          "end": 9249.035256860365
+        }
+      ],
+      "bankAngle": -0.3885820397375459,
+      "boostChains": [
+        {
+          "id": 0,
+          "mode": "straight",
+          "pads": [
+            {
+              "s": 3777.979299229273,
+              "x": 1.4210854715202004e-14,
+              "heading": 0
+            },
+            {
+              "s": 3997.979299229273,
+              "x": 1.4210854715202004e-14,
+              "heading": 0
+            }
+          ]
+        },
+        {
+          "id": 1,
+          "mode": "angled",
+          "pads": [
+            {
+              "s": 4970.752433392228,
+              "x": -29.999999999999986,
+              "heading": 0.06807645825799948
+            },
+            {
+              "s": 5190.752433392228,
+              "x": -14.999999999999986,
+              "heading": 0.06807645825799948
+            },
+            {
+              "s": 5410.752433392228,
+              "x": 1.4210854715202004e-14,
+              "heading": 0.06807645825799948
+            },
+            {
+              "s": 5630.752433392228,
+              "x": 15.000000000000014,
+              "heading": 0.06807645825799948
+            }
+          ]
+        }
+      ],
+      "rings": [
+        {
+          "id": 0,
+          "s": 2859.404307001461,
+          "x": 0,
+          "height": 39,
+          "radius": 10,
+          "ramp": 0
+        }
+      ],
+      "ringBoosts": [],
+      "tubeBend": 0,
+      "tubeShape": 0,
+      "skyline": {
+        "buildings": 85,
+        "nearby": 15
+      },
+      "atmosphere": {
+        "clouds": [
+          {
+            "center": [
+              -271.7518859335692,
+              77.26772115390345,
+              -520.4337875037974
+            ],
+            "size": [
+              175,
+              85,
+              165
+            ]
+          },
+          {
+            "center": [
+              -733.5600017040582,
+              153.76777831179473,
+              -283.4931678448884
+            ],
+            "size": [
+              175,
+              85,
+              165
+            ]
+          },
+          {
+            "center": [
+              -555,
+              163.32913204532912,
+              -1385.2613610369226
+            ],
+            "size": [
+              175,
+              85,
+              165
+            ]
+          },
+          {
+            "center": [
+              -140.7356376706438,
+              165.5007367986862,
+              -2176.217600679609
+            ],
+            "size": [
+              175,
+              85,
+              165
+            ]
+          },
+          {
+            "center": [
+              297.00232800436834,
+              232.75458473955007,
+              -2030.4582916911884
+            ],
+            "size": [
+              175,
+              85,
+              165
+            ]
+          },
+          {
+            "center": [
+              485.56219553366213,
+              602.854981807894,
+              -2183.1741786479524
+            ],
+            "size": [
+              175,
+              85,
+              165
+            ]
+          },
+          {
+            "center": [
+              749.3306297408644,
+              189.10350003914292,
+              -1995.5859996689137
+            ],
+            "size": [
+              175,
+              85,
+              165
+            ]
+          },
+          {
+            "center": [
+              905.4689849786098,
+              155.90128895160652,
+              -1109.344311138423
+            ],
+            "size": [
+              175,
+              85,
+              165
+            ]
+          },
+          {
+            "center": [
+              1037.324149687677,
+              115.11090272467308,
+              -362.772342845959
+            ],
+            "size": [
+              175,
+              85,
+              165
+            ]
+          },
+          {
+            "center": [
+              416.19639664398244,
+              58.516245325039975,
+              -154.11170039269285
+            ],
+            "size": [
+              175,
+              85,
+              165
+            ]
+          }
+        ],
+        "time": 0.9299999999999998,
+        "towerBase": -7000,
+        "depthWidth": 960,
+        "depthHeight": 600
+      },
+      "surfaceNormal": [
+        -0.062015912565628904,
+        0.9166182751112667,
+        0.3949239981574916
+      ],
+      "elapsed": 0.9166666666666679,
+      "trackLength": 10066.957828734812,
+      "ships": [
+        {
+          "id": 0,
+          "s": 622.3812224054004,
+          "x": -6.2744343364316295,
+          "yaw": -0.5879410552319255,
+          "speed": 112,
+          "laps": 0,
+          "checkpoint": 1,
+          "item": "boost",
+          "boost": 0,
+          "energy": 100,
+          "drifting": true,
+          "driftCharge": 0.850000000000001,
+          "driftTier": 1,
+          "markerPenalty": true,
+          "markerStreak": 0,
+          "markerPassed": 0,
+          "markerMissed": 1,
+          "pitch": 0,
+          "flightTilted": false,
+          "dropFlight": false,
+          "recovery": 0,
+          "position": [
+            -192.78464539869714,
+            69.95803407593533,
+            -521.8234918397327
+          ],
+          "airborne": 0,
+          "airHeight": 0.030347067838471187,
+          "hoverHeight": 1.8303470678384712,
+          "hoverVelocity": -0.13242203005462513,
+          "aiPace": 1,
+          "launches": 0,
+          "finish": null
+        },
+        {
+          "id": 1,
+          "s": 619.1816452603134,
+          "x": 1.4262463991406642,
+          "yaw": 0.03160453608385653,
+          "speed": 112.36452574629106,
+          "laps": 0,
+          "checkpoint": 1,
+          "item": null,
+          "boost": 0,
+          "energy": 100,
+          "drifting": false,
+          "driftCharge": 0,
+          "driftTier": 0,
+          "markerPenalty": true,
+          "markerStreak": 0,
+          "markerPassed": 0,
+          "markerMissed": 1,
+          "pitch": 0,
+          "flightTilted": false,
+          "dropFlight": false,
+          "recovery": 0,
+          "position": [
+            -186.24439737724674,
+            72.35492582952246,
+            -526.6665646064046
+          ],
+          "airborne": 0,
+          "airHeight": 0,
+          "hoverHeight": 1.756593354419125,
+          "hoverVelocity": -0.09992041142730552,
+          "aiPace": 1.0032546941633131,
+          "launches": 0,
+          "finish": null
+        },
+        {
+          "id": 2,
+          "s": 612.2036204666057,
+          "x": 1.8274631406931132,
+          "yaw": 0.04651997677701055,
+          "speed": 112.74343041180896,
+          "laps": 0,
+          "checkpoint": 1,
+          "item": null,
+          "boost": 0,
+          "energy": 100,
+          "drifting": false,
+          "driftCharge": 0,
+          "driftTier": 0,
+          "markerPenalty": true,
+          "markerStreak": 0,
+          "markerPassed": 0,
+          "markerMissed": 1,
+          "pitch": 0,
+          "flightTilted": false,
+          "dropFlight": false,
+          "recovery": 0,
+          "position": [
+            -179.96258915033502,
+            71.59151677602762,
+            -524.0231701764759
+          ],
+          "airborne": 0,
+          "airHeight": 0,
+          "hoverHeight": 1.7808383467593947,
+          "hoverVelocity": 0.15817041981492946,
+          "aiPace": 1.0066377715340085,
+          "launches": 0,
+          "finish": null
+        },
+        {
+          "id": 3,
+          "s": 605.4284974469937,
+          "x": -1.8431971993891048,
+          "yaw": -0.050547780695546836,
+          "speed": 113.12389001899027,
+          "laps": 0,
+          "checkpoint": 1,
+          "item": null,
+          "boost": 0,
+          "energy": 100,
+          "drifting": false,
+          "driftCharge": 0,
+          "driftTier": 0,
+          "markerPenalty": true,
+          "markerStreak": 0,
+          "markerPassed": 0,
+          "markerMissed": 1,
+          "pitch": 0,
+          "flightTilted": false,
+          "dropFlight": false,
+          "recovery": 0,
+          "position": [
+            -175.99688592114728,
+            69.45453009358823,
+            -518.1003777842167
+          ],
+          "airborne": 0,
+          "airHeight": 0.04834439262417889,
+          "hoverHeight": 1.848344392624179,
+          "hoverVelocity": 0.05916163592017308,
+          "aiPace": 1.010034732312413,
+          "launches": 0,
+          "finish": null
+        },
+        {
+          "id": 4,
+          "s": 597.9980383795179,
+          "x": 3.011298868476244,
+          "yaw": 0.04330136030942579,
+          "speed": 113.52497971389296,
+          "laps": 0,
+          "checkpoint": 1,
+          "item": null,
+          "boost": 0,
+          "energy": 100,
+          "drifting": false,
+          "driftCharge": 0,
+          "driftTier": 0,
+          "markerPenalty": true,
+          "markerStreak": 0,
+          "markerPassed": 0,
+          "markerMissed": 1,
+          "pitch": 0,
+          "flightTilted": false,
+          "dropFlight": false,
+          "recovery": 0,
+          "position": [
+            -167.18387467450705,
+            70.06291830256184,
+            -518.4910332327917
+          ],
+          "airborne": 0,
+          "airHeight": 0.006703835601232333,
+          "hoverHeight": 1.8067038356012324,
+          "hoverVelocity": -0.17341572193859134,
+          "aiPace": 1.0136158903026158,
+          "launches": 0,
+          "finish": null
+        },
+        {
+          "id": 5,
+          "s": 591.1465595255345,
+          "x": 1.3096604052324554,
+          "yaw": -0.051008385827043264,
+          "speed": 113.91809079146947,
+          "laps": 0,
+          "checkpoint": 1,
+          "item": null,
+          "boost": 0,
+          "energy": 100,
+          "drifting": true,
+          "driftCharge": 0.04828712980627313,
+          "driftTier": 0,
+          "markerPenalty": true,
+          "markerStreak": 0,
+          "markerPassed": 0,
+          "markerMissed": 1,
+          "pitch": 0,
+          "flightTilted": false,
+          "dropFlight": false,
+          "recovery": 0,
+          "position": [
+            -162.31983013384152,
+            68.47215630727436,
+            -513.8669660118518
+          ],
+          "airborne": 0,
+          "airHeight": 0,
+          "hoverHeight": 1.7499281027600586,
+          "hoverVelocity": -0.014474313928029902,
+          "aiPace": 1.0171258106381202,
+          "launches": 0,
+          "finish": null
+        }
+      ],
+      "rockets": 0,
+      "mines": 0,
+      "trailVertices": 288,
+      "particles": 123,
+      "rendering": {
+        "width": 960,
+        "height": 600,
+        "pixelRatio": 1,
+        "brightness": 0.5,
+        "bloom": true,
+        "composerWidth": 960,
+        "composerHeight": 600
+      },
+      "landing": null,
+      "camera": {
+        "position": [
+          -166.51502555893995,
+          73.21188163297664,
+          -509.68936581146295
+        ],
+        "direction": [
+          -0.8834664020370723,
+          -0.011587213227629125,
+          -0.4683512068536686
+        ]
+      },
+      "drawCalls": 287,
+      "triangles": 160654
+    },
+    "release": {
+      "id": 0,
+      "s": 631.3632516053357,
+      "x": -9.936533417103027,
+      "yaw": -0.30980303165887835,
+      "speed": 140.35974534976074,
+      "laps": 0,
+      "checkpoint": 1,
+      "item": "boost",
+      "boost": 0.5999999999999999,
+      "energy": 100,
+      "drifting": false,
+      "driftCharge": 0,
+      "driftTier": 0,
+      "markerPenalty": true,
+      "markerStreak": 0,
+      "markerPassed": 0,
+      "markerMissed": 1,
+      "pitch": 0,
+      "flightTilted": false,
+      "dropFlight": false,
+      "recovery": 0,
+      "position": [
+        -202.34671685328232,
+        69.49662327361368,
+        -522.4059460894069
+      ],
+      "airborne": 0,
+      "airHeight": 0.02053597976896926,
+      "hoverHeight": 1.8205359797689693,
+      "hoverVelocity": -0.154971003021677,
+      "aiPace": 1,
+      "launches": 0,
+      "finish": null
+    },
+    "vortexRamp": {
+      "flying": {
+        "id": 0,
+        "s": 3517.508483367573,
+        "x": -46.70863461324471,
+        "yaw": -0.01741543419268958,
+        "speed": 165.71423499298425,
+        "laps": 0,
+        "checkpoint": 6,
+        "item": null,
+        "boost": 0.21666666666666567,
+        "energy": 100,
+        "drifting": false,
+        "driftCharge": 0,
+        "driftTier": 0,
+        "markerPenalty": false,
+        "markerStreak": 0,
+        "markerPassed": 0,
+        "markerMissed": 0,
+        "pitch": 0.029731380542433614,
+        "flightTilted": false,
+        "dropFlight": false,
+        "recovery": 0,
+        "position": [
+          -551.6694377864486,
+          458.51828650098605,
+          -2250.4444274948355
+        ],
+        "airborne": 0.10099999999999999,
+        "airHeight": 4.984583797342814,
+        "hoverHeight": 1.8464825542318892,
+        "hoverVelocity": 0.053954810744458244,
+        "aiPace": 1,
+        "launches": 1,
+        "finish": null
+      },
+      "landed": {
+        "id": 0,
+        "s": 3570.6500493793837,
+        "x": -47.63248738721289,
+        "yaw": -0.0009917560995266399,
+        "speed": 140,
+        "laps": 0,
+        "checkpoint": 6,
+        "item": null,
+        "boost": 0,
+        "energy": 100,
+        "drifting": false,
+        "driftCharge": 0,
+        "driftTier": 0,
+        "markerPenalty": false,
+        "markerStreak": 0,
+        "markerPassed": 0,
+        "markerMissed": 0,
+        "pitch": 0,
+        "flightTilted": false,
+        "dropFlight": false,
+        "recovery": 0,
+        "position": [
+          -500.0356740929396,
+          466.744111710282,
+          -2269.980259302995
+        ],
+        "airborne": 0,
+        "airHeight": 0,
+        "hoverHeight": 1.6483869284135406,
+        "hoverVelocity": -7,
+        "aiPace": 1,
+        "launches": 1,
+        "finish": null
+      }
+    },
+    "oblivionRamp": {
+      "flying": {
+        "id": 0,
+        "s": 7030.284622653425,
+        "x": -46.84149651480111,
+        "yaw": -0.01791087902482404,
+        "speed": 165.79204071081523,
+        "laps": 0,
+        "checkpoint": 12,
+        "item": null,
+        "boost": 0.21666666666666567,
+        "energy": 100,
+        "drifting": false,
+        "driftCharge": 0,
+        "driftTier": 0,
+        "markerPenalty": false,
+        "markerStreak": 0,
+        "markerPassed": 0,
+        "markerMissed": 0,
+        "pitch": 0.03133527863924171,
+        "flightTilted": false,
+        "dropFlight": false,
+        "recovery": 0,
+        "position": [
+          -676.4424371366217,
+          558.8144392393389,
+          -5009.149497168604
+        ],
+        "airborne": 0.10099999999999999,
+        "airHeight": 5.170289497144447,
+        "hoverHeight": 1.8464825542318892,
+        "hoverVelocity": 0.053954810744458244,
+        "aiPace": 1,
+        "launches": 1,
+        "finish": null
+      },
+      "landed": {
+        "id": 0,
+        "s": 7093.340203059788,
+        "x": -49.16104837695319,
+        "yaw": -0.01731750433696965,
+        "speed": 140,
+        "laps": 0,
+        "checkpoint": 12,
+        "item": null,
+        "boost": 0,
+        "energy": 100,
+        "drifting": false,
+        "driftCharge": 0,
+        "driftTier": 0,
+        "markerPenalty": false,
+        "markerStreak": 0,
+        "markerPassed": 0,
+        "markerMissed": 0,
+        "pitch": 0,
+        "flightTilted": false,
+        "dropFlight": false,
+        "recovery": 0,
+        "position": [
+          -614.2390258133754,
+          571.7165960233809,
+          -5033.1176906652145
+        ],
+        "airborne": 0,
+        "airHeight": 0,
+        "hoverHeight": 1.2774425382093437,
+        "hoverVelocity": -3.4037007731011744,
+        "aiPace": 1,
+        "launches": 1,
+        "finish": null
+      }
+    },
+    "skyline": {
+      "buildings": 85,
+      "nearby": 15
+    }
+  },
+  "sizes": [
+    {
+      "file": "/Users/mike/Work/kart/docs/screenshots/oblivion-final-exam-menu.png",
+      "bytes": 462939,
+      "compressed": false
+    },
+    {
+      "file": "/Users/mike/Work/kart/docs/screenshots/slalom-banked-drift.png",
+      "bytes": 335339,
+      "compressed": false
+    },
+    {
+      "file": "/Users/mike/Work/kart/docs/screenshots/rift-offset-jump-3.png",
+      "bytes": 181713,
+      "compressed": false
+    },
+    {
+      "file": "/Users/mike/Work/kart/docs/screenshots/oblivion-offset-jump-4.png",
+      "bytes": 200314,
+      "compressed": false
+    },
+    {
+      "file": "/Users/mike/Work/kart/docs/screenshots/vortex-tunnel-ramp.png",
+      "bytes": 283949,
+      "compressed": false
+    },
+    {
+      "file": "/Users/mike/Work/kart/docs/screenshots/oblivion-tunnel-ramp.png",
+      "bytes": 284603,
+      "compressed": false
+    },
+    {
+      "file": "/Users/mike/Work/kart/docs/screenshots/larger-sparse-skyscrapers.png",
+      "bytes": 316377,
+      "compressed": false
+    },
+    {
+      "file": "/Users/mike/Work/kart/docs/screenshots/course-theme-mobile.png",
+      "bytes": 237724,
+      "compressed": false
+    }
+  ]
+}

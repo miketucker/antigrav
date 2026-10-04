@@ -1,0 +1,36 @@
+{
+  "records": [
+    {
+      "id": "slalom",
+      "length": 10066.957828734814,
+      "minNonlocalClearance": 133.82584681857833,
+      "maxHeadingDegreesPer10Units": 68.20641931730462,
+      "maxCenterFrameDegreesPer2Units": 23.44176452727748,
+      "maxQuietRoadUnits": 779.5125399663402
+    },
+    {
+      "id": "rift",
+      "length": 11780.244185256162,
+      "minNonlocalClearance": 133.8130348104298,
+      "maxHeadingDegreesPer10Units": 73.06676321882227,
+      "maxCenterFrameDegreesPer2Units": 10.17156862802235,
+      "maxQuietRoadUnits": 4619.420845603844
+    },
+    {
+      "id": "vortex",
+      "length": 10875.649862398324,
+      "minNonlocalClearance": 69.25488932850163,
+      "maxHeadingDegreesPer10Units": 72.85099592802796,
+      "maxCenterFrameDegreesPer2Units": 163.23323877631523,
+      "maxQuietRoadUnits": 1109.9379920323054
+    },
+    {
+      "id": "oblivion",
+      "length": 18026.21767631877,
+      "minNonlocalClearance": 53.16542469898307,
+      "maxHeadingDegreesPer10Units": 73.73416438898724,
+      "maxCenterFrameDegreesPer2Units": 172.4098196706203,
+      "maxQuietRoadUnits": 1193.1797697698494
+    }
+  ]
+}

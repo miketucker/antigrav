@@ -1,0 +1,4707 @@
+{
+  "success": true,
+  "errors": [],
+  "checks": {
+    "stages": [
+      {
+        "stage": "foundry",
+        "environment": {
+          "name": "INDUSTRIAL DUSK",
+          "theme": "foundry",
+          "mountains": false,
+          "abstract": 0,
+          "ambient": 1.9,
+          "sun": 2,
+          "geometries": 107,
+          "textures": 28,
+          "signs": []
+        },
+        "skyline": {
+          "buildings": 85,
+          "nearby": 15
+        },
+        "atmosphere": {
+          "clouds": [
+            {
+              "center": [
+                -29.10173963305531,
+                30.75508199444797,
+                -285.6110082408399
+              ],
+              "size": [
+                130,
+                55,
+                140
+              ]
+            },
+            {
+              "center": [
+                -316.5349151467666,
+                45.301876308401134,
+                -519.339744796809
+              ],
+              "size": [
+                130,
+                55,
+                140
+              ]
+            },
+            {
+              "center": [
+                -389.22576823213444,
+                32.18005946014597,
+                -96.05525018435839
+              ],
+              "size": [
+                130,
+                55,
+                140
+              ]
+            },
+            {
+              "center": [
+                133.5234985058456,
+                113.71354300697074,
+                94.6474242994413
+              ],
+              "size": [
+                130,
+                55,
+                140
+              ]
+            },
+            {
+              "center": [
+                274.1802010245001,
+                142.52265925682474,
+                -207.47486279316652
+              ],
+              "size": [
+                130,
+                55,
+                140
+              ]
+            },
+            {
+              "center": [
+                540.3396082921872,
+                85.70074272566825,
+                -73.01369410425212
+              ],
+              "size": [
+                130,
+                55,
+                140
+              ]
+            },
+            {
+              "center": [
+                399.1761266284552,
+                24.31163748915878,
+                283.11959041734906
+              ],
+              "size": [
+                130,
+                55,
+                140
+              ]
+            },
+            {
+              "center": [
+                -1.8377916468565036,
+                23.119208021625134,
+                257.56584227174363
+              ],
+              "size": [
+                130,
+                55,
+                140
+              ]
+            }
+          ],
+          "time": 0.11330000000000018,
+          "quality": {
+            "scale": 0.5,
+            "steps": 6,
+            "maxClouds": 4,
+            "noiseOctaves": 1
+          },
+          "activeClouds": 4,
+          "cloudWidth": 480,
+          "cloudHeight": 300,
+          "towerBase": -7000,
+          "depthWidth": 960,
+          "depthHeight": 600
+        }
+      },
+      {
+        "stage": "abyss",
+        "environment": {
+          "name": "MOONLIT CHASM",
+          "theme": "abyss",
+          "stars": "Points",
+          "mountains": true,
+          "abstract": 0,
+          "ambient": 1.25,
+          "sun": 1.6,
+          "geometries": 181,
+          "textures": 30,
+          "signs": []
+        },
+        "skyline": {
+          "buildings": 16,
+          "nearby": 4
+        },
+        "atmosphere": {
+          "clouds": [
+            {
+              "center": [
+                -221.1168291142745,
+                207.85564738594806,
+                -544.9820668076927
+              ],
+              "size": [
+                130,
+                55,
+                140
+              ]
+            },
+            {
+              "center": [
+                -573.7280385678878,
+                277.5497964033038,
+                -1084.589031952611
+              ],
+              "size": [
+                130,
+                55,
+                140
+              ]
+            },
+            {
+              "center": [
+                -591,
+                62.135784922919264,
+                -2236.5484843271142
+              ],
+              "size": [
+                130,
+                55,
+                140
+              ]
+            },
+            {
+              "center": [
+                48.37605164449174,
+                75.98878525580093,
+                -3105.537869543685
+              ],
+              "size": [
+                130,
+                55,
+                140
+              ]
+            },
+            {
+              "center": [
+                622.3444982629368,
+                127.55014242498359,
+                -2654.5903714679353
+              ],
+              "size": [
+                130,
+                55,
+                140
+              ]
+            },
+            {
+              "center": [
+                610,
+                127,
+                -1914.5429163763315
+              ],
+              "size": [
+                130,
+                55,
+                140
+              ]
+            },
+            {
+              "center": [
+                635.7138683214699,
+                130.75680225807884,
+                -932.3715432874236
+              ],
+              "size": [
+                130,
+                55,
+                140
+              ]
+            },
+            {
+              "center": [
+                427.66782183356946,
+                175.94738906548884,
+                -5.050415147262019
+              ],
+              "size": [
+                130,
+                55,
+                140
+              ]
+            },
+            {
+              "center": [
+                -586,
+                265,
+                -1190
+              ],
+              "size": [
+                160,
+                85,
+                190
+              ]
+            }
+          ],
+          "time": 0.09659999999999991,
+          "quality": {
+            "scale": 0.5,
+            "steps": 6,
+            "maxClouds": 4,
+            "noiseOctaves": 1
+          },
+          "activeClouds": 4,
+          "cloudWidth": 480,
+          "cloudHeight": 300,
+          "towerBase": -7000,
+          "depthWidth": 960,
+          "depthHeight": 600
+        }
+      },
+      {
+        "stage": "helix",
+        "environment": {
+          "name": "VIOLET SCULPTURE FIELD",
+          "theme": "helix",
+          "mountains": false,
+          "abstract": 2,
+          "ambient": 2.15,
+          "sun": 1.65,
+          "geometries": 188,
+          "textures": 31,
+          "signs": []
+        },
+        "skyline": {
+          "buildings": 22,
+          "nearby": 5
+        },
+        "atmosphere": {
+          "clouds": [
+            {
+              "center": [
+                -160.69712767783534,
+                176.31431227061805,
+                -608.7582249071238
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                -88.59624015320385,
+                340.98422509878884,
+                -219.39993711285663
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                -334.0706116478694,
+                496.0444682155955,
+                -234.81133798757836
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                40.27329857538976,
+                695.3295673307409,
+                -967.1691556047265
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                89.5252868646792,
+                978.647083837327,
+                -692.6125201212546
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                278.1475283307933,
+                585.7740868793289,
+                -1144.9698183028465
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                983.5277795196272,
+                350.8003303791391,
+                -1121.5674874784704
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                583.4901305674131,
+                273.0903844271407,
+                -1317.0666846683184
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                1162.229782472348,
+                131.06514702898238,
+                -754.0028507799371
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                538.1258832592897,
+                32.03522194005052,
+                99.2490472302712
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            }
+          ],
+          "time": 0.19340000000000007,
+          "quality": {
+            "scale": 0.5,
+            "steps": 6,
+            "maxClouds": 4,
+            "noiseOctaves": 1
+          },
+          "activeClouds": 4,
+          "cloudWidth": 480,
+          "cloudHeight": 300,
+          "towerBase": -7000,
+          "depthWidth": 960,
+          "depthHeight": 600
+        }
+      },
+      {
+        "stage": "slalom",
+        "environment": {
+          "name": "NEON MIDNIGHT",
+          "theme": "slalom",
+          "stars": "Points",
+          "mountains": false,
+          "abstract": 0,
+          "ambient": 1.15,
+          "sun": 0.9,
+          "geometries": 342,
+          "textures": 57,
+          "signs": [
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.17659999999999992,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.17659999999999992,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.17659999999999992,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.17659999999999992,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.17659999999999992,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.17659999999999992,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.17659999999999992,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.17659999999999992,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.17659999999999992,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.17659999999999992,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.17659999999999992,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.17659999999999992,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.17659999999999992,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.17659999999999992,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.17659999999999992,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.17659999999999992,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.17659999999999992,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.17659999999999992,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.17659999999999992,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.17659999999999992,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.17659999999999992,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.17659999999999992,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.17659999999999992,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.17659999999999992,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.17659999999999992,
+              "intensity": 1
+            }
+          ]
+        },
+        "skyline": {
+          "buildings": 85,
+          "nearby": 15
+        },
+        "atmosphere": {
+          "clouds": [
+            {
+              "center": [
+                -357.7485894515695,
+                87.20540201737333,
+                -619.1253873915612
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                -981.1139310768098,
+                114.76838792387605,
+                -74.98431664790418
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                -879.3394080817442,
+                194.99999999999997,
+                -1236.827541189354
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                -731.1974172161496,
+                195.2066099005872,
+                -2463.7054243149564
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                -114.5794664923738,
+                164.27395277039926,
+                -2195.5458216710786
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                -71.98966616106344,
+                579.277491839696,
+                -1714.3172694917187
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                189.59170160027614,
+                249.11880030460816,
+                -1632.1239196047286
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                1080.062536199337,
+                151.24290311359084,
+                -1136.285633695562
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                677.6465050512774,
+                73.18291539153934,
+                -940.3532775869504
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                413.92262009246593,
+                56.11660025036148,
+                10.235105324904907
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            }
+          ],
+          "time": 0.17659999999999992,
+          "quality": {
+            "scale": 0.5,
+            "steps": 6,
+            "maxClouds": 4,
+            "noiseOctaves": 1
+          },
+          "activeClouds": 4,
+          "cloudWidth": 480,
+          "cloudHeight": 300,
+          "towerBase": -7000,
+          "depthWidth": 960,
+          "depthHeight": 600
+        }
+      },
+      {
+        "stage": "rift",
+        "environment": {
+          "name": "SCARLET ALPINE VOID",
+          "theme": "rift",
+          "mountains": true,
+          "abstract": 0,
+          "ambient": 2.5,
+          "sun": 2.3,
+          "geometries": 346,
+          "textures": 49,
+          "signs": [
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09669999999999981,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09669999999999981,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09669999999999981,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09669999999999981,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09669999999999981,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09669999999999981,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09669999999999981,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09669999999999981,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09669999999999981,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09669999999999981,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09669999999999981,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09669999999999981,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09669999999999981,
+              "intensity": 1
+            }
+          ]
+        },
+        "skyline": {
+          "nearby": 0
+        },
+        "atmosphere": {
+          "clouds": [
+            {
+              "center": [
+                -358.5846701588316,
+                195.47901743202496,
+                -619.7561817540177
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                -622,
+                254.99999999999997,
+                -1646.1283528898903
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                -645.3890705196992,
+                212.92628788634505,
+                -3047.214221895474
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                -213.2063384527217,
+                266.2541661324268,
+                -4022.338582741573
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                113.22595602937176,
+                260.84611219415893,
+                -3385.453889322798
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                191.7553449611361,
+                586.9764231707519,
+                -3452.7111092300706
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                744.0808005706842,
+                258.2556837903212,
+                -2906.736081823206
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                1026.9848412325491,
+                199.05876930233924,
+                -2017.8198646949706
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                1133.460876464364,
+                120.88018767082369,
+                -986.4540440009096
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                475.5507601080959,
+                58.55686823567562,
+                50.4190030655643
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            }
+          ],
+          "time": 0.09669999999999981,
+          "quality": {
+            "scale": 0.5,
+            "steps": 6,
+            "maxClouds": 4,
+            "noiseOctaves": 1
+          },
+          "activeClouds": 4,
+          "cloudWidth": 480,
+          "cloudHeight": 300,
+          "towerBase": -7000,
+          "depthWidth": 960,
+          "depthHeight": 600
+        }
+      },
+      {
+        "stage": "vortex",
+        "environment": {
+          "name": "DEEP ORBIT",
+          "theme": "vortex",
+          "stars": "Points",
+          "mountains": false,
+          "abstract": 2,
+          "ambient": 1.35,
+          "sun": 1.15,
+          "geometries": 446,
+          "textures": 58,
+          "signs": [
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09670000000000073,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09670000000000073,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09670000000000073,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09670000000000073,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09670000000000073,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09670000000000073,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09670000000000073,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09670000000000073,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09670000000000073,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09670000000000073,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09670000000000073,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09670000000000073,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09670000000000073,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09670000000000073,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09670000000000073,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09670000000000073,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09670000000000073,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09670000000000073,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09670000000000073,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09670000000000073,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09670000000000073,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09670000000000073,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09670000000000073,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09670000000000073,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09670000000000073,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09670000000000073,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09670000000000073,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09670000000000073,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09670000000000073,
+              "intensity": 1
+            }
+          ]
+        },
+        "skyline": {
+          "buildings": 10,
+          "nearby": 2
+        },
+        "atmosphere": {
+          "clouds": [
+            {
+              "center": [
+                -521.159658951121,
+                196.94174182120835,
+                -527.1515277892893
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                -1110.3553248382416,
+                337.0799595583525,
+                -822.7084712892606
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                -1393,
+                350,
+                -2250.6286898455337
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                -638.546163133619,
+                391.2774945797298,
+                -2235.738189089769
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                -508.069496056696,
+                771.0313970023608,
+                -2071.596375716602
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                -443.03554993590456,
+                397.734485911626,
+                -1588.558740215668
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                -19.222724234567828,
+                216.3863281549744,
+                -1991.5233418262062
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                -1.1980791178756416,
+                89.44073261332971,
+                -1312.9253686317327
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                1161.4555506983884,
+                97.82659759448242,
+                -1050.3139193315035
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                580.2438230991409,
+                58.608519974349036,
+                32.205621245001396
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            }
+          ],
+          "time": 0.09670000000000073,
+          "quality": {
+            "scale": 0.5,
+            "steps": 6,
+            "maxClouds": 4,
+            "noiseOctaves": 1
+          },
+          "activeClouds": 4,
+          "cloudWidth": 480,
+          "cloudHeight": 300,
+          "towerBase": -7000,
+          "depthWidth": 960,
+          "depthHeight": 600
+        }
+      },
+      {
+        "stage": "oblivion",
+        "environment": {
+          "name": "GOLDEN HORIZON",
+          "theme": "oblivion",
+          "mountains": false,
+          "abstract": 0,
+          "ambient": 2.1,
+          "sun": 3,
+          "geometries": 728,
+          "textures": 87,
+          "signs": [
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            },
+            {
+              "width": 16.899999618530273,
+              "height": 12,
+              "children": 1,
+              "shader": "ShaderMaterial",
+              "transparent": true,
+              "depthWrite": false,
+              "time": 0.09659999999999946,
+              "intensity": 1
+            }
+          ]
+        },
+        "skyline": {
+          "buildings": 48,
+          "nearby": 8
+        },
+        "atmosphere": {
+          "clouds": [
+            {
+              "center": [
+                -787.1015955586522,
+                282.727374674603,
+                -105.46511338267997
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                -1775.339602467262,
+                531.5678176238614,
+                -753.2248863347938
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                -1815,
+                479.9999999999999,
+                -3288.229858226455
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                -1674.7718897747159,
+                531.0728043045716,
+                -5549.1087869356115
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                -983.806945310407,
+                637.4338034525282,
+                -4736.993706482078
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                -678.1671232183814,
+                427.83307138797556,
+                -4248.324506137072
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                -576.3726710079333,
+                131.28466561925518,
+                -4219.3732340203
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                1168.456157380048,
+                80.38808530894693,
+                -3624.0497211467555
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                1413.1901907921383,
+                97.05591217870519,
+                -2099.9673562496414
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            },
+            {
+              "center": [
+                1050.8473483018133,
+                61.22552178818166,
+                -72.21264729550046
+              ],
+              "size": [
+                175,
+                85,
+                165
+              ]
+            }
+          ],
+          "time": 0.09659999999999946,
+          "quality": {
+            "scale": 0.5,
+            "steps": 6,
+            "maxClouds": 4,
+            "noiseOctaves": 1
+          },
+          "activeClouds": 4,
+          "cloudWidth": 480,
+          "cloudHeight": 300,
+          "towerBase": -7000,
+          "depthWidth": 960,
+          "depthHeight": 600
+        }
+      },
+      {
+        "stage": "driftlab",
+        "environment": {
+          "name": "HOLOGRAPHIC TEST VOID",
+          "theme": "driftlab",
+          "stars": "Points",
+          "mountains": false,
+          "abstract": 0,
+          "ambient": 2.1,
+          "sun": 1.4,
+          "geometries": 59,
+          "textures": 23,
+          "signs": []
+        },
+        "skyline": {
+          "nearby": 0
+        },
+        "atmosphere": {
+          "clouds": [
+            {
+              "center": [
+                -127.52364429065307,
+                22,
+                -534.4640966339272
+              ],
+              "size": [
+                130,
+                55,
+                140
+              ]
+            },
+            {
+              "center": [
+                -11.378852751781519,
+                22,
+                -1103.735271979067
+              ],
+              "size": [
+                130,
+                55,
+                140
+              ]
+            },
+            {
+              "center": [
+                -154.2749682158412,
+                22,
+                -1927.2713540552882
+              ],
+              "size": [
+                130,
+                55,
+                140
+              ]
+            },
+            {
+              "center": [
+                809.6175112588627,
+                22,
+                -2181.239114393994
+              ],
+              "size": [
+                130,
+                55,
+                140
+              ]
+            },
+            {
+              "center": [
+                774.456188547597,
+                22,
+                -1698.437073979829
+              ],
+              "size": [
+                130,
+                55,
+                140
+              ]
+            },
+            {
+              "center": [
+                722.1262785520768,
+                22,
+                -1182.1534311951962
+              ],
+              "size": [
+                130,
+                55,
+                140
+              ]
+            },
+            {
+              "center": [
+                901.595076252149,
+                22,
+                -555.5310581652116
+              ],
+              "size": [
+                130,
+                55,
+                140
+              ]
+            },
+            {
+              "center": [
+                406.4906299752038,
+                22,
+                84.56000470985717
+              ],
+              "size": [
+                130,
+                55,
+                140
+              ]
+            }
+          ],
+          "time": 0.09669999999999981,
+          "quality": {
+            "scale": 0.5,
+            "steps": 6,
+            "maxClouds": 4,
+            "noiseOctaves": 1
+          },
+          "activeClouds": 4,
+          "cloudWidth": 480,
+          "cloudHeight": 300,
+          "towerBase": -7000,
+          "depthWidth": 960,
+          "depthHeight": 600
+        }
+      }
+    ],
+    "markers": [
+      {
+        "side": "left",
+        "text": "",
+        "label": "Pass left, 51 meters ahead. Full power.",
+        "arrow": 100,
+        "transform": "none"
+      },
+      {
+        "side": "right",
+        "text": "",
+        "label": "Pass right, 65 meters ahead. Full power.",
+        "arrow": 100,
+        "transform": "matrix(-1, 0, 0, -1, 0, 0)"
+      }
+    ],
+    "switches": [
+      {
+        "round": 0,
+        "stage": "abyss",
+        "geometries": 62,
+        "textures": 25
+      },
+      {
+        "round": 0,
+        "stage": "helix",
+        "geometries": 65,
+        "textures": 25
+      },
+      {
+        "round": 0,
+        "stage": "rift",
+        "geometries": 56,
+        "textures": 22
+      },
+      {
+        "round": 0,
+        "stage": "slalom",
+        "geometries": 85,
+        "textures": 25
+      },
+      {
+        "round": 0,
+        "stage": "vortex",
+        "geometries": 66,
+        "textures": 25
+      },
+      {
+        "round": 0,
+        "stage": "oblivion",
+        "geometries": 65,
+        "textures": 24
+      },
+      {
+        "round": 0,
+        "stage": "driftlab",
+        "geometries": 45,
+        "textures": 22
+      },
+      {
+        "round": 0,
+        "stage": "foundry",
+        "geometries": 87,
+        "textures": 25
+      },
+      {
+        "round": 1,
+        "stage": "abyss",
+        "geometries": 62,
+        "textures": 25
+      },
+      {
+        "round": 1,
+        "stage": "helix",
+        "geometries": 65,
+        "textures": 25
+      },
+      {
+        "round": 1,
+        "stage": "rift",
+        "geometries": 56,
+        "textures": 22
+      },
+      {
+        "round": 1,
+        "stage": "slalom",
+        "geometries": 85,
+        "textures": 25
+      },
+      {
+        "round": 1,
+        "stage": "vortex",
+        "geometries": 66,
+        "textures": 25
+      },
+      {
+        "round": 1,
+        "stage": "oblivion",
+        "geometries": 65,
+        "textures": 24
+      },
+      {
+        "round": 1,
+        "stage": "driftlab",
+        "geometries": 45,
+        "textures": 22
+      },
+      {
+        "round": 1,
+        "stage": "foundry",
+        "geometries": 87,
+        "textures": 25
+      }
+    ],
+    "retina": {
+      "phase": "paused",
+      "stage": "oblivion",
+      "openEdges": false,
+      "curvature": 0,
+      "curvatureAhead": 0,
+      "roadWidth": 30,
+      "drop": null,
+      "pipe": {
+        "start": 8235.46779023674,
+        "end": 9193.59701324103,
+        "radius": 28
+      },
+      "pipes": [
+        {
+          "start": 8235.46779023674,
+          "end": 9193.59701324103,
+          "radius": 28
+        },
+        {
+          "start": 11353.947987893758,
+          "end": 15413.776872842036,
+          "radius": 28
+        },
+        {
+          "start": 15933.776872842036,
+          "end": 20353.59149820267,
+          "radius": 28
+        }
+      ],
+      "gaps": [
+        {
+          "start": 4713.024176951318,
+          "end": 4940.518539619767,
+          "landingEnd": 5185.368615617422,
+          "width": 24,
+          "lift": 52
+        },
+        {
+          "start": 5565.436346025143,
+          "end": 5779.30026675116,
+          "landingEnd": 6109.219166228515,
+          "width": 22,
+          "lift": 54
+        },
+        {
+          "start": 6489.274269496922,
+          "end": 6718.795931196928,
+          "landingEnd": 7032.783028274625,
+          "width": 20,
+          "lift": 56
+        },
+        {
+          "start": 7412.776021836234,
+          "end": 7658.083253705043,
+          "landingEnd": 7956.060816239106,
+          "width": 18,
+          "lift": 58
+        }
+      ],
+      "markers": [
+        {
+          "id": 0,
+          "s": 220,
+          "x": 0,
+          "side": "left"
+        },
+        {
+          "id": 1,
+          "s": 328,
+          "x": 0,
+          "side": "right"
+        },
+        {
+          "id": 2,
+          "s": 436,
+          "x": 0,
+          "side": "left"
+        },
+        {
+          "id": 3,
+          "s": 544,
+          "x": 0,
+          "side": "right"
+        },
+        {
+          "id": 4,
+          "s": 652,
+          "x": 0,
+          "side": "left"
+        },
+        {
+          "id": 5,
+          "s": 760,
+          "x": 0,
+          "side": "right"
+        },
+        {
+          "id": 6,
+          "s": 868,
+          "x": 0,
+          "side": "left"
+        },
+        {
+          "id": 7,
+          "s": 976,
+          "x": 0,
+          "side": "right"
+        },
+        {
+          "id": 8,
+          "s": 1084,
+          "x": 0,
+          "side": "left"
+        },
+        {
+          "id": 9,
+          "s": 1192,
+          "x": 0,
+          "side": "right"
+        },
+        {
+          "id": 10,
+          "s": 1300,
+          "x": 0,
+          "side": "left"
+        },
+        {
+          "id": 11,
+          "s": 1408,
+          "x": 0,
+          "side": "right"
+        },
+        {
+          "id": 12,
+          "s": 1516,
+          "x": 0,
+          "side": "left"
+        },
+        {
+          "id": 13,
+          "s": 1624,
+          "x": 0,
+          "side": "right"
+        },
+        {
+          "id": 14,
+          "s": 1732,
+          "x": 0,
+          "side": "left"
+        },
+        {
+          "id": 15,
+          "s": 1840,
+          "x": 0,
+          "side": "right"
+        },
+        {
+          "id": 16,
+          "s": 1948,
+          "x": 0,
+          "side": "left"
+        },
+        {
+          "id": 17,
+          "s": 2056,
+          "x": 0,
+          "side": "right"
+        },
+        {
+          "id": 18,
+          "s": 2164,
+          "x": 0,
+          "side": "left"
+        },
+        {
+          "id": 19,
+          "s": 2272,
+          "x": 0,
+          "side": "right"
+        },
+        {
+          "id": 20,
+          "s": 2380,
+          "x": 0,
+          "side": "left"
+        },
+        {
+          "id": 21,
+          "s": 2488,
+          "x": 0,
+          "side": "right"
+        },
+        {
+          "id": 22,
+          "s": 2596,
+          "x": 0,
+          "side": "left"
+        },
+        {
+          "id": 23,
+          "s": 2704,
+          "x": 0,
+          "side": "right"
+        },
+        {
+          "id": 24,
+          "s": 2812,
+          "x": 0,
+          "side": "left"
+        },
+        {
+          "id": 25,
+          "s": 2920,
+          "x": 0,
+          "side": "right"
+        },
+        {
+          "id": 26,
+          "s": 3028,
+          "x": 0,
+          "side": "left"
+        },
+        {
+          "id": 27,
+          "s": 3136,
+          "x": 0,
+          "side": "right"
+        },
+        {
+          "id": 28,
+          "s": 3244,
+          "x": 0,
+          "side": "left"
+        },
+        {
+          "id": 29,
+          "s": 3352,
+          "x": 0,
+          "side": "right"
+        },
+        {
+          "id": 30,
+          "s": 3460,
+          "x": 0,
+          "side": "left"
+        },
+        {
+          "id": 31,
+          "s": 3568,
+          "x": 0,
+          "side": "right"
+        },
+        {
+          "id": 32,
+          "s": 3676,
+          "x": 0,
+          "side": "left"
+        },
+        {
+          "id": 33,
+          "s": 3784,
+          "x": 0,
+          "side": "right"
+        },
+        {
+          "id": 34,
+          "s": 3892,
+          "x": 0,
+          "side": "left"
+        },
+        {
+          "id": 35,
+          "s": 4000,
+          "x": 0,
+          "side": "right"
+        },
+        {
+          "id": 36,
+          "s": 4108,
+          "x": 0,
+          "side": "left"
+        },
+        {
+          "id": 37,
+          "s": 4216,
+          "x": 0,
+          "side": "right"
+        },
+        {
+          "id": 38,
+          "s": 4324,
+          "x": 0,
+          "side": "left"
+        },
+        {
+          "id": 39,
+          "s": 4432,
+          "x": 0,
+          "side": "right"
+        },
+        {
+          "id": 40,
+          "s": 4540,
+          "x": 0,
+          "side": "left"
+        },
+        {
+          "id": 41,
+          "s": 20598.280313789455,
+          "x": 0,
+          "side": "right"
+        },
+        {
+          "id": 42,
+          "s": 20706.280313789455,
+          "x": 0,
+          "side": "left"
+        },
+        {
+          "id": 43,
+          "s": 20814.280313789455,
+          "x": 0,
+          "side": "right"
+        },
+        {
+          "id": 44,
+          "s": 20922.280313789455,
+          "x": 0,
+          "side": "left"
+        },
+        {
+          "id": 45,
+          "s": 21030.280313789455,
+          "x": 0,
+          "side": "right"
+        }
+      ],
+      "barriers": [
+        {
+          "id": 0,
+          "s": 290,
+          "x": 7,
+          "width": 9,
+          "height": 5,
+          "length": 7
+        },
+        {
+          "id": 1,
+          "s": 641.9186814126098,
+          "x": -7,
+          "width": 9,
+          "height": 5,
+          "length": 7
+        },
+        {
+          "id": 2,
+          "s": 993.8373628252195,
+          "x": 7,
+          "width": 9,
+          "height": 5,
+          "length": 7
+        },
+        {
+          "id": 3,
+          "s": 1345.7560442378294,
+          "x": -7,
+          "width": 9,
+          "height": 5,
+          "length": 7
+        },
+        {
+          "id": 4,
+          "s": 1697.674725650439,
+          "x": -7,
+          "width": 9,
+          "height": 5,
+          "length": 7
+        },
+        {
+          "id": 5,
+          "s": 2049.593407063049,
+          "x": 7,
+          "width": 9,
+          "height": 5,
+          "length": 7
+        },
+        {
+          "id": 6,
+          "s": 2401.512088475659,
+          "x": -7,
+          "width": 9,
+          "height": 5,
+          "length": 7
+        },
+        {
+          "id": 7,
+          "s": 2753.430769888269,
+          "x": 7,
+          "width": 9,
+          "height": 5,
+          "length": 7
+        },
+        {
+          "id": 8,
+          "s": 3105.349451300878,
+          "x": 7,
+          "width": 9,
+          "height": 5,
+          "length": 7
+        },
+        {
+          "id": 9,
+          "s": 3457.2681327134883,
+          "x": -7,
+          "width": 9,
+          "height": 5,
+          "length": 7
+        },
+        {
+          "id": 10,
+          "s": 3809.1868141260984,
+          "x": 7,
+          "width": 9,
+          "height": 5,
+          "length": 7
+        },
+        {
+          "id": 11,
+          "s": 4161.105495538708,
+          "x": -7,
+          "width": 9,
+          "height": 5,
+          "length": 7
+        },
+        {
+          "id": 12,
+          "s": 8645.46779023674,
+          "x": -87.94689145077133,
+          "width": 10,
+          "height": 4,
+          "length": 8
+        },
+        {
+          "id": 13,
+          "s": 11763.947987893758,
+          "x": -87.94689145077133,
+          "width": 10,
+          "height": 4,
+          "length": 8
+        },
+        {
+          "id": 14,
+          "s": 12183.947987893758,
+          "x": 44.000000000000014,
+          "width": 10,
+          "height": 4,
+          "length": 8
+        },
+        {
+          "id": 15,
+          "s": 12603.947987893758,
+          "x": 0.017702849742832427,
+          "width": 10,
+          "height": 4,
+          "length": 8
+        },
+        {
+          "id": 16,
+          "s": 13023.947987893758,
+          "x": -43.96459430051418,
+          "width": 10,
+          "height": 4,
+          "length": 8
+        },
+        {
+          "id": 17,
+          "s": 13443.947987893758,
+          "x": -87.94689145077116,
+          "width": 10,
+          "height": 4,
+          "length": 8
+        },
+        {
+          "id": 18,
+          "s": 13863.947987893758,
+          "x": 44.000000000000014,
+          "width": 10,
+          "height": 4,
+          "length": 8
+        },
+        {
+          "id": 19,
+          "s": 14283.947987893758,
+          "x": 0.017702849742832427,
+          "width": 10,
+          "height": 4,
+          "length": 8
+        },
+        {
+          "id": 20,
+          "s": 14703.947987893758,
+          "x": -43.964594300514406,
+          "width": 10,
+          "height": 4,
+          "length": 8
+        },
+        {
+          "id": 21,
+          "s": 15123.947987893758,
+          "x": -87.94689145077122,
+          "width": 10,
+          "height": 4,
+          "length": 8
+        },
+        {
+          "id": 22,
+          "s": 16343.776872842036,
+          "x": -87.94689145077133,
+          "width": 10,
+          "height": 4,
+          "length": 8
+        },
+        {
+          "id": 23,
+          "s": 16763.776872842034,
+          "x": 44.000000000000014,
+          "width": 10,
+          "height": 4,
+          "length": 8
+        },
+        {
+          "id": 24,
+          "s": 17183.776872842034,
+          "x": 0.017702849742832427,
+          "width": 10,
+          "height": 4,
+          "length": 8
+        },
+        {
+          "id": 25,
+          "s": 17603.776872842034,
+          "x": -43.96459430051418,
+          "width": 10,
+          "height": 4,
+          "length": 8
+        },
+        {
+          "id": 26,
+          "s": 18023.776872842034,
+          "x": -87.94689145077116,
+          "width": 10,
+          "height": 4,
+          "length": 8
+        },
+        {
+          "id": 27,
+          "s": 18443.776872842034,
+          "x": 44.000000000000014,
+          "width": 10,
+          "height": 4,
+          "length": 8
+        },
+        {
+          "id": 28,
+          "s": 18863.776872842034,
+          "x": 0.017702849742832427,
+          "width": 10,
+          "height": 4,
+          "length": 8
+        },
+        {
+          "id": 29,
+          "s": 19283.776872842034,
+          "x": -43.964594300514406,
+          "width": 10,
+          "height": 4,
+          "length": 8
+        },
+        {
+          "id": 30,
+          "s": 19703.776872842034,
+          "x": -87.94689145077122,
+          "width": 10,
+          "height": 4,
+          "length": 8
+        },
+        {
+          "id": 31,
+          "s": 20123.776872842034,
+          "x": 43.999999999999844,
+          "width": 10,
+          "height": 4,
+          "length": 8
+        }
+      ],
+      "exterior": {
+        "radius": 28,
+        "spiralStart": 8155.46779023674,
+        "spiralEnd": 9273.59701324103,
+        "loopStart": 9662.678000256876,
+        "loopEnd": 10943.578130390373,
+        "descentStart": 11113.947987893758,
+        "descentEnd": 20613.59149820267
+      },
+      "ramps": [
+        {
+          "s": 4713.024176951318,
+          "x": 0,
+          "length": 48,
+          "width": 60,
+          "height": 5
+        },
+        {
+          "s": 5565.436346025143,
+          "x": 0,
+          "length": 48,
+          "width": 60,
+          "height": 5
+        },
+        {
+          "s": 6489.274269496922,
+          "x": 0,
+          "length": 48,
+          "width": 60,
+          "height": 5
+        },
+        {
+          "s": 7412.776021836234,
+          "x": 0,
+          "length": 48,
+          "width": 60,
+          "height": 5
+        },
+        {
+          "s": 9482.678000256876,
+          "x": 44,
+          "length": 38,
+          "width": 16,
+          "height": 5
+        },
+        {
+          "s": 8555.46779023674,
+          "x": -43.98229715025711,
+          "length": 44,
+          "width": 18,
+          "height": 4
+        },
+        {
+          "s": 11673.947987893758,
+          "x": -43.98229715025711,
+          "length": 44,
+          "width": 18,
+          "height": 4
+        },
+        {
+          "s": 11993.947987893758,
+          "x": 1.4210854715202004e-14,
+          "length": 44,
+          "width": 18,
+          "height": 4
+        },
+        {
+          "s": 12313.947987893758,
+          "x": 43.98229715025708,
+          "length": 44,
+          "width": 18,
+          "height": 4
+        },
+        {
+          "s": 12633.947987893758,
+          "x": -43.98229715025711,
+          "length": 44,
+          "width": 18,
+          "height": 4
+        },
+        {
+          "s": 12953.947987893758,
+          "x": 1.4210854715202004e-14,
+          "length": 44,
+          "width": 18,
+          "height": 4
+        },
+        {
+          "s": 13273.947987893758,
+          "x": 43.98229715025708,
+          "length": 44,
+          "width": 18,
+          "height": 4
+        },
+        {
+          "s": 13593.947987893758,
+          "x": -43.98229715025711,
+          "length": 44,
+          "width": 18,
+          "height": 4
+        },
+        {
+          "s": 13913.947987893758,
+          "x": 1.4210854715202004e-14,
+          "length": 44,
+          "width": 18,
+          "height": 4
+        },
+        {
+          "s": 14233.947987893758,
+          "x": 43.98229715025708,
+          "length": 44,
+          "width": 18,
+          "height": 4
+        },
+        {
+          "s": 14553.947987893758,
+          "x": -43.98229715025711,
+          "length": 44,
+          "width": 18,
+          "height": 4
+        },
+        {
+          "s": 14873.947987893758,
+          "x": 1.4210854715202004e-14,
+          "length": 44,
+          "width": 18,
+          "height": 4
+        },
+        {
+          "s": 16253.776872842036,
+          "x": -43.98229715025711,
+          "length": 44,
+          "width": 18,
+          "height": 4
+        },
+        {
+          "s": 16573.776872842034,
+          "x": 1.4210854715202004e-14,
+          "length": 44,
+          "width": 18,
+          "height": 4
+        },
+        {
+          "s": 16893.776872842034,
+          "x": 43.98229715025708,
+          "length": 44,
+          "width": 18,
+          "height": 4
+        },
+        {
+          "s": 17213.776872842034,
+          "x": -43.98229715025711,
+          "length": 44,
+          "width": 18,
+          "height": 4
+        },
+        {
+          "s": 17533.776872842034,
+          "x": 1.4210854715202004e-14,
+          "length": 44,
+          "width": 18,
+          "height": 4
+        },
+        {
+          "s": 17853.776872842034,
+          "x": 43.98229715025708,
+          "length": 44,
+          "width": 18,
+          "height": 4
+        },
+        {
+          "s": 18173.776872842034,
+          "x": -43.98229715025711,
+          "length": 44,
+          "width": 18,
+          "height": 4
+        },
+        {
+          "s": 18493.776872842034,
+          "x": 1.4210854715202004e-14,
+          "length": 44,
+          "width": 18,
+          "height": 4
+        },
+        {
+          "s": 18813.776872842034,
+          "x": 43.98229715025708,
+          "length": 44,
+          "width": 18,
+          "height": 4
+        },
+        {
+          "s": 19133.776872842034,
+          "x": -43.98229715025711,
+          "length": 44,
+          "width": 18,
+          "height": 4
+        },
+        {
+          "s": 19453.776872842034,
+          "x": 1.4210854715202004e-14,
+          "length": 44,
+          "width": 18,
+          "height": 4
+        },
+        {
+          "s": 19773.776872842034,
+          "x": 43.98229715025708,
+          "length": 44,
+          "width": 18,
+          "height": 4
+        },
+        {
+          "s": 9862.678000256876,
+          "x": -43.999999999999986,
+          "length": 38,
+          "width": 18,
+          "height": 5
+        },
+        {
+          "s": 10192.678000256876,
+          "x": 1.4210854715202004e-14,
+          "length": 38,
+          "width": 18,
+          "height": 5
+        },
+        {
+          "s": 10522.678000256876,
+          "x": 44.000000000000014,
+          "length": 38,
+          "width": 18,
+          "height": 5
+        }
+      ],
+      "flats": [
+        {
+          "center": 0,
+          "length": 260,
+          "transition": 100,
+          "name": "GRID / POWER UP"
+        },
+        {
+          "center": 2356.512088475659,
+          "length": 4653.024176951318,
+          "transition": 110,
+          "name": "DRIFT ALLEY / MARKER SLALOM"
+        },
+        {
+          "center": 4949.196396284369,
+          "length": 832.344438666104,
+          "transition": 100,
+          "name": "SKY JUMP / AIM FOR THE DECK"
+        },
+        {
+          "center": 5837.32775612683,
+          "length": 903.7828202033716,
+          "transition": 100,
+          "name": "SKY JUMP / AIM FOR THE DECK"
+        },
+        {
+          "center": 6761.028648885774,
+          "length": 903.5087587777034,
+          "transition": 100,
+          "name": "SKY JUMP / AIM FOR THE DECK"
+        },
+        {
+          "center": 7684.41841903767,
+          "length": 903.2847944028726,
+          "transition": 100,
+          "name": "SKY JUMP / AIM FOR THE DECK"
+        },
+        {
+          "center": 21028.280313789455,
+          "length": 480,
+          "transition": 180,
+          "name": "HOME STRAIGHT / MARKER SLALOM"
+        }
+      ],
+      "banks": [
+        {
+          "start": 280,
+          "end": 4233.028334926222
+        }
+      ],
+      "bankAngle": 0,
+      "boostChains": [
+        {
+          "id": 0,
+          "mode": "angled",
+          "pads": [
+            {
+              "s": 9762.678000256876,
+              "x": -29.999999999999986,
+              "heading": 0.06807645825799948
+            },
+            {
+              "s": 9982.678000256876,
+              "x": -14.999999999999986,
+              "heading": 0.06807645825799948
+            },
+            {
+              "s": 10202.678000256876,
+              "x": 1.4210854715202004e-14,
+              "heading": 0.06807645825799948
+            },
+            {
+              "s": 10422.678000256876,
+              "x": 15.000000000000014,
+              "heading": 0.06807645825799948
+            }
+          ]
+        },
+        {
+          "id": 1,
+          "mode": "angled",
+          "pads": [
+            {
+              "s": 8455.46779023674,
+              "x": 1.4210854715202004e-14,
+              "heading": 0.20653607310567618
+            },
+            {
+              "s": 8665.46779023674,
+              "x": 44.000000000000014,
+              "heading": 0.20653607310567618
+            },
+            {
+              "s": 8875.46779023674,
+              "x": -87.92918860102843,
+              "heading": 0.20653607310567618
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "mode": "angled",
+          "pads": [
+            {
+              "s": 11573.947987893758,
+              "x": 1.4210854715202004e-14,
+              "heading": 0.20653607310567618
+            },
+            {
+              "s": 11783.947987893758,
+              "x": 44.000000000000014,
+              "heading": 0.20653607310567618
+            },
+            {
+              "s": 11993.947987893758,
+              "x": -87.92918860102843,
+              "heading": 0.20653607310567618
+            },
+            {
+              "s": 12203.947987893758,
+              "x": -43.92918860102843,
+              "heading": 0.20653607310567618
+            },
+            {
+              "s": 12413.947987893758,
+              "x": 0.0708113989715713,
+              "heading": 0.20653607310567618
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "mode": "angled",
+          "pads": [
+            {
+              "s": 16153.776872842036,
+              "x": 1.4210854715202004e-14,
+              "heading": 0.20653607310567618
+            },
+            {
+              "s": 16363.776872842036,
+              "x": 44.000000000000014,
+              "heading": 0.20653607310567618
+            },
+            {
+              "s": 16573.776872842034,
+              "x": -87.92918860102843,
+              "heading": 0.20653607310567618
+            },
+            {
+              "s": 16783.776872842034,
+              "x": -43.92918860102843,
+              "heading": 0.20653607310567618
+            },
+            {
+              "s": 16993.776872842034,
+              "x": 0.0708113989715713,
+              "heading": 0.20653607310567618
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "mode": "straight",
+          "pads": [
+            {
+              "s": 4333.024176951318,
+              "x": 0,
+              "heading": 0
+            },
+            {
+              "s": 4473.024176951318,
+              "x": 0,
+              "heading": 0
+            },
+            {
+              "s": 4613.024176951318,
+              "x": 0,
+              "heading": 0
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "mode": "straight",
+          "pads": [
+            {
+              "s": 5185.436346025143,
+              "x": 0,
+              "heading": 0
+            },
+            {
+              "s": 5325.436346025143,
+              "x": 0,
+              "heading": 0
+            },
+            {
+              "s": 5465.436346025143,
+              "x": 0,
+              "heading": 0
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "mode": "straight",
+          "pads": [
+            {
+              "s": 6109.274269496922,
+              "x": 0,
+              "heading": 0
+            },
+            {
+              "s": 6249.274269496922,
+              "x": 0,
+              "heading": 0
+            },
+            {
+              "s": 6389.274269496922,
+              "x": 0,
+              "heading": 0
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "mode": "straight",
+          "pads": [
+            {
+              "s": 7032.776021836234,
+              "x": 0,
+              "heading": 0
+            },
+            {
+              "s": 7172.776021836234,
+              "x": 0,
+              "heading": 0
+            },
+            {
+              "s": 7312.776021836234,
+              "x": 0,
+              "heading": 0
+            }
+          ]
+        }
+      ],
+      "rings": [
+        {
+          "id": 0,
+          "s": 4808.024176951318,
+          "x": 0,
+          "height": 39,
+          "radius": 10,
+          "ramp": 0
+        },
+        {
+          "id": 1,
+          "s": 5660.436346025143,
+          "x": 0,
+          "height": 39,
+          "radius": 10,
+          "ramp": 1
+        },
+        {
+          "id": 2,
+          "s": 6584.274269496922,
+          "x": 0,
+          "height": 39,
+          "radius": 10,
+          "ramp": 2
+        },
+        {
+          "id": 3,
+          "s": 7507.776021836234,
+          "x": 0,
+          "height": 39,
+          "radius": 10,
+          "ramp": 3
+        },
+        {
+          "id": 4,
+          "s": 9572.678000256876,
+          "x": 44,
+          "height": 17,
+          "radius": 8,
+          "ramp": 4
+        },
+        {
+          "id": 5,
+          "s": 8625.46779023674,
+          "x": -43.98229715025711,
+          "height": 11,
+          "radius": 6,
+          "ramp": 5
+        },
+        {
+          "id": 6,
+          "s": 11743.947987893758,
+          "x": -43.98229715025711,
+          "height": 11,
+          "radius": 6,
+          "ramp": 6
+        },
+        {
+          "id": 7,
+          "s": 12063.947987893758,
+          "x": 1.4210854715202004e-14,
+          "height": 11,
+          "radius": 6,
+          "ramp": 7
+        },
+        {
+          "id": 8,
+          "s": 12383.947987893758,
+          "x": 43.98229715025708,
+          "height": 11,
+          "radius": 6,
+          "ramp": 8
+        },
+        {
+          "id": 9,
+          "s": 12703.947987893758,
+          "x": -43.98229715025711,
+          "height": 11,
+          "radius": 6,
+          "ramp": 9
+        },
+        {
+          "id": 10,
+          "s": 13023.947987893758,
+          "x": 1.4210854715202004e-14,
+          "height": 11,
+          "radius": 6,
+          "ramp": 10
+        },
+        {
+          "id": 11,
+          "s": 13343.947987893758,
+          "x": 43.98229715025708,
+          "height": 11,
+          "radius": 6,
+          "ramp": 11
+        },
+        {
+          "id": 12,
+          "s": 13663.947987893758,
+          "x": -43.98229715025711,
+          "height": 11,
+          "radius": 6,
+          "ramp": 12
+        },
+        {
+          "id": 13,
+          "s": 13983.947987893758,
+          "x": 1.4210854715202004e-14,
+          "height": 11,
+          "radius": 6,
+          "ramp": 13
+        },
+        {
+          "id": 14,
+          "s": 14303.947987893758,
+          "x": 43.98229715025708,
+          "height": 11,
+          "radius": 6,
+          "ramp": 14
+        },
+        {
+          "id": 15,
+          "s": 14623.947987893758,
+          "x": -43.98229715025711,
+          "height": 11,
+          "radius": 6,
+          "ramp": 15
+        },
+        {
+          "id": 16,
+          "s": 14943.947987893758,
+          "x": 1.4210854715202004e-14,
+          "height": 11,
+          "radius": 6,
+          "ramp": 16
+        },
+        {
+          "id": 17,
+          "s": 16323.776872842036,
+          "x": -43.98229715025711,
+          "height": 11,
+          "radius": 6,
+          "ramp": 17
+        },
+        {
+          "id": 18,
+          "s": 16643.776872842034,
+          "x": 1.4210854715202004e-14,
+          "height": 11,
+          "radius": 6,
+          "ramp": 18
+        },
+        {
+          "id": 19,
+          "s": 16963.776872842034,
+          "x": 43.98229715025708,
+          "height": 11,
+          "radius": 6,
+          "ramp": 19
+        },
+        {
+          "id": 20,
+          "s": 17283.776872842034,
+          "x": -43.98229715025711,
+          "height": 11,
+          "radius": 6,
+          "ramp": 20
+        },
+        {
+          "id": 21,
+          "s": 17603.776872842034,
+          "x": 1.4210854715202004e-14,
+          "height": 11,
+          "radius": 6,
+          "ramp": 21
+        },
+        {
+          "id": 22,
+          "s": 17923.776872842034,
+          "x": 43.98229715025708,
+          "height": 11,
+          "radius": 6,
+          "ramp": 22
+        },
+        {
+          "id": 23,
+          "s": 18243.776872842034,
+          "x": -43.98229715025711,
+          "height": 11,
+          "radius": 6,
+          "ramp": 23
+        },
+        {
+          "id": 24,
+          "s": 18563.776872842034,
+          "x": 1.4210854715202004e-14,
+          "height": 11,
+          "radius": 6,
+          "ramp": 24
+        },
+        {
+          "id": 25,
+          "s": 18883.776872842034,
+          "x": 43.98229715025708,
+          "height": 11,
+          "radius": 6,
+          "ramp": 25
+        },
+        {
+          "id": 26,
+          "s": 19203.776872842034,
+          "x": -43.98229715025711,
+          "height": 11,
+          "radius": 6,
+          "ramp": 26
+        },
+        {
+          "id": 27,
+          "s": 19523.776872842034,
+          "x": 1.4210854715202004e-14,
+          "height": 11,
+          "radius": 6,
+          "ramp": 27
+        },
+        {
+          "id": 28,
+          "s": 19843.776872842034,
+          "x": 43.98229715025708,
+          "height": 11,
+          "radius": 6,
+          "ramp": 28
+        },
+        {
+          "id": 29,
+          "s": 9952.678000256876,
+          "x": -43.999999999999986,
+          "height": 17,
+          "radius": 8,
+          "ramp": 29
+        },
+        {
+          "id": 30,
+          "s": 10282.678000256876,
+          "x": 1.4210854715202004e-14,
+          "height": 17,
+          "radius": 8,
+          "ramp": 30
+        },
+        {
+          "id": 31,
+          "s": 10612.678000256876,
+          "x": 44.000000000000014,
+          "height": 17,
+          "radius": 8,
+          "ramp": 31
+        }
+      ],
+      "ringBoosts": [],
+      "tubeBend": 0,
+      "tubeShape": 0,
+      "environment": {
+        "name": "GOLDEN HORIZON",
+        "theme": "oblivion",
+        "mountains": false,
+        "abstract": 0,
+        "ambient": 2.1,
+        "sun": 3,
+        "geometries": 747,
+        "textures": 88,
+        "signs": [
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          },
+          {
+            "width": 16.899999618530273,
+            "height": 12,
+            "children": 1,
+            "shader": "ShaderMaterial",
+            "transparent": true,
+            "depthWrite": false,
+            "time": 0.21,
+            "intensity": 1
+          }
+        ]
+      },
+      "skyline": {
+        "buildings": 48,
+        "nearby": 8
+      },
+      "atmosphere": {
+        "clouds": [
+          {
+            "center": [
+              -787.1015955586522,
+              282.727374674603,
+              -105.46511338267997
+            ],
+            "size": [
+              175,
+              85,
+              165
+            ]
+          },
+          {
+            "center": [
+              -1775.339602467262,
+              531.5678176238614,
+              -753.2248863347938
+            ],
+            "size": [
+              175,
+              85,
+              165
+            ]
+          },
+          {
+            "center": [
+              -1815,
+              479.9999999999999,
+              -3288.229858226455
+            ],
+            "size": [
+              175,
+              85,
+              165
+            ]
+          },
+          {
+            "center": [
+              -1674.7718897747159,
+              531.0728043045716,
+              -5549.1087869356115
+            ],
+            "size": [
+              175,
+              85,
+              165
+            ]
+          },
+          {
+            "center": [
+              -983.806945310407,
+              637.4338034525282,
+              -4736.993706482078
+            ],
+            "size": [
+              175,
+              85,
+              165
+            ]
+          },
+          {
+            "center": [
+              -678.1671232183814,
+              427.83307138797556,
+              -4248.324506137072
+            ],
+            "size": [
+              175,
+              85,
+              165
+            ]
+          },
+          {
+            "center": [
+              -576.3726710079333,
+              131.28466561925518,
+              -4219.3732340203
+            ],
+            "size": [
+              175,
+              85,
+              165
+            ]
+          },
+          {
+            "center": [
+              1168.456157380048,
+              80.38808530894693,
+              -3624.0497211467555
+            ],
+            "size": [
+              175,
+              85,
+              165
+            ]
+          },
+          {
+            "center": [
+              1413.1901907921383,
+              97.05591217870519,
+              -2099.9673562496414
+            ],
+            "size": [
+              175,
+              85,
+              165
+            ]
+          },
+          {
+            "center": [
+              1050.8473483018133,
+              61.22552178818166,
+              -72.21264729550046
+            ],
+            "size": [
+              175,
+              85,
+              165
+            ]
+          }
+        ],
+        "time": 0.21,
+        "quality": {
+          "scale": 0.5,
+          "steps": 6,
+          "maxClouds": 4,
+          "noiseOctaves": 1
+        },
+        "activeClouds": 4,
+        "cloudWidth": 640,
+        "cloudHeight": 400,
+        "towerBase": -7000,
+        "depthWidth": 1280,
+        "depthHeight": 800
+      },
+      "surfaceNormal": [
+        0,
+        0.9999787637353755,
+        0.006517060554405629
+      ],
+      "elapsed": 0.19999999999999998,
+      "trackLength": 21198.280313789455,
+      "ships": [
+        {
+          "id": 0,
+          "s": 123.67761011020649,
+          "x": -4,
+          "yaw": 0,
+          "speed": 115.43149359903201,
+          "laps": 0,
+          "checkpoint": 1,
+          "item": null,
+          "boost": 0,
+          "energy": 100,
+          "drifting": false,
+          "driftCharge": 0,
+          "driftTier": 0,
+          "markerPenalty": false,
+          "markerStreak": 0,
+          "markerPassed": 0,
+          "markerMissed": 0,
+          "pitch": 0,
+          "flightTilted": false,
+          "dropFlight": false,
+          "falling": false,
+          "recovery": 0,
+          "position": [
+            -4,
+            29.8524062179784,
+            -123.49136630908771
+          ],
+          "airborne": 0,
+          "airHeight": 0.007483045993819992,
+          "hoverHeight": 1.80748304599382,
+          "hoverVelocity": 0.08072186608430118,
+          "aiPace": 1,
+          "launches": 0,
+          "finish": null
+        },
+        {
+          "id": 1,
+          "s": 115.8895000818419,
+          "x": 0.9156201427895652,
+          "yaw": -0.1365423303955943,
+          "speed": 129.33564351502153,
+          "laps": 0,
+          "checkpoint": 1,
+          "item": null,
+          "boost": 0,
+          "energy": 100,
+          "drifting": false,
+          "driftCharge": 0,
+          "driftTier": 0,
+          "markerPenalty": false,
+          "markerStreak": 0,
+          "markerPassed": 0,
+          "markerMissed": 0,
+          "pitch": 0,
+          "flightTilted": false,
+          "dropFlight": false,
+          "falling": false,
+          "recovery": 0,
+          "position": [
+            0.9156201427895652,
+            29.830498827227764,
+            -115.8024670829517
+          ],
+          "airborne": 0,
+          "airHeight": 0.022381980601596352,
+          "hoverHeight": 1.8223819806015964,
+          "hoverVelocity": 0.12614730438509117,
+          "aiPace": 1.0015876702679785,
+          "launches": 0,
+          "finish": null
+        },
+        {
+          "id": 2,
+          "s": 106.99693767256831,
+          "x": -5.076329917629261,
+          "yaw": -0.04495167011162212,
+          "speed": 129.33564351502153,
+          "laps": 0,
+          "checkpoint": 1,
+          "item": null,
+          "boost": 0,
+          "energy": 100,
+          "drifting": false,
+          "driftCharge": 0,
+          "driftTier": 0,
+          "markerPenalty": false,
+          "markerStreak": 0,
+          "markerPassed": 0,
+          "markerMissed": 0,
+          "pitch": 0,
+          "flightTilted": false,
+          "dropFlight": false,
+          "falling": false,
+          "recovery": 0,
+          "position": [
+            -5.076329917629261,
+            29.77831826325701,
+            -106.98191775398601
+          ],
+          "airborne": 0,
+          "airHeight": 0,
+          "hoverHeight": 1.78674936406229,
+          "hoverVelocity": -0.11322863736478272,
+          "aiPace": 1.002927848601314,
+          "launches": 0,
+          "finish": null
+        },
+        {
+          "id": 3,
+          "s": 97.98379241764097,
+          "x": 3.182245829927441,
+          "yaw": -0.03414695918313214,
+          "speed": 129.33564351502153,
+          "laps": 0,
+          "checkpoint": 1,
+          "item": null,
+          "boost": 0,
+          "energy": 100,
+          "drifting": false,
+          "driftCharge": 0,
+          "driftTier": 0,
+          "markerPenalty": false,
+          "markerStreak": 0,
+          "markerPassed": 0,
+          "markerMissed": 0,
+          "pitch": 0,
+          "flightTilted": false,
+          "dropFlight": false,
+          "falling": false,
+          "recovery": 0,
+          "position": [
+            3.182245829927441,
+            29.773165253221553,
+            -97.9996688990069
+          ],
+          "airborne": 0,
+          "airHeight": 0,
+          "hoverHeight": 1.78103256237138,
+          "hoverVelocity": -0.09696953134301711,
+          "aiPace": 1.004273859922023,
+          "launches": 0,
+          "finish": null
+        },
+        {
+          "id": 4,
+          "s": 88.99524218888203,
+          "x": -3.200541849913108,
+          "yaw": 0.03338264200569885,
+          "speed": 129.33564351502153,
+          "laps": 0,
+          "checkpoint": 1,
+          "item": null,
+          "boost": 0,
+          "energy": 100,
+          "drifting": false,
+          "driftCharge": 0,
+          "driftTier": 0,
+          "markerPenalty": false,
+          "markerStreak": 0,
+          "markerPassed": 0,
+          "markerMissed": 0,
+          "pitch": 0,
+          "flightTilted": false,
+          "dropFlight": false,
+          "falling": false,
+          "recovery": 0,
+          "position": [
+            -3.200541849913108,
+            29.815801999684858,
+            -89.00294258204252
+          ],
+          "airborne": 0,
+          "airHeight": 0.018138335756392676,
+          "hoverHeight": 1.8181383357563927,
+          "hoverVelocity": 0.13821661782071407,
+          "aiPace": 1.005620416142793,
+          "launches": 0,
+          "finish": null
+        },
+        {
+          "id": 5,
+          "s": 79.97776046494009,
+          "x": 5.337286474634429,
+          "yaw": 0.05586199470574433,
+          "speed": 129.33564351502153,
+          "laps": 0,
+          "checkpoint": 1,
+          "item": null,
+          "boost": 0,
+          "energy": 100,
+          "drifting": false,
+          "driftCharge": 0,
+          "driftTier": 0,
+          "markerPenalty": false,
+          "markerStreak": 0,
+          "markerPassed": 0,
+          "markerMissed": 0,
+          "pitch": 0,
+          "flightTilted": false,
+          "dropFlight": false,
+          "falling": false,
+          "recovery": 0,
+          "position": [
+            5.337286474634429,
+            29.81400703111169,
+            -79.97682347804984
+          ],
+          "airborne": 0,
+          "airHeight": 0.01429338823283044,
+          "hoverHeight": 1.8142933882328305,
+          "hoverVelocity": 0.06135263089032215,
+          "aiPace": 1.0069691545440973,
+          "launches": 0,
+          "finish": null
+        }
+      ],
+      "rockets": 0,
+      "mines": 0,
+      "trailVertices": 288,
+      "particles": 60,
+      "rendering": {
+        "stage": "oblivion",
+        "width": 1280,
+        "height": 800,
+        "pixelRatio": 2,
+        "brightness": 0.5,
+        "bloom": true,
+        "composerWidth": 1280,
+        "composerHeight": 800
+      },
+      "landing": null,
+      "camera": {
+        "position": [
+          -4,
+          35.77333460097828,
+          -97.54952544082606
+        ],
+        "direction": [
+          0,
+          -0.1599970425693622,
+          -0.9871174937002473
+        ]
+      },
+      "drawCalls": 771,
+      "triangles": 187931
+    },
+    "mobile": {
+      "width": 78,
+      "arrow": 78,
+      "right": 374,
+      "screen": 390
+    }
+  },
+  "screenshots": [
+    {
+      "file": "/Users/mike/Work/kart/docs/screenshots/environment-foundry.png",
+      "bytes": 305954,
+      "compressed": false
+    },
+    {
+      "file": "/Users/mike/Work/kart/docs/screenshots/environment-abyss.png",
+      "bytes": 330377,
+      "compressed": false
+    },
+    {
+      "file": "/Users/mike/Work/kart/docs/screenshots/environment-helix.png",
+      "bytes": 318203,
+      "compressed": false
+    },
+    {
+      "file": "/Users/mike/Work/kart/docs/screenshots/environment-slalom.png",
+      "bytes": 373642,
+      "compressed": false
+    },
+    {
+      "file": "/Users/mike/Work/kart/docs/screenshots/environment-rift.png",
+      "bytes": 306395,
+      "compressed": false
+    },
+    {
+      "file": "/Users/mike/Work/kart/docs/screenshots/environment-vortex.png",
+      "bytes": 355553,
+      "compressed": false
+    },
+    {
+      "file": "/Users/mike/Work/kart/docs/screenshots/environment-oblivion.png",
+      "bytes": 379974,
+      "compressed": false
+    },
+    {
+      "file": "/Users/mike/Work/kart/docs/screenshots/environment-driftlab.png",
+      "bytes": 208417,
+      "compressed": false
+    },
+    {
+      "file": "/Users/mike/Work/kart/docs/screenshots/marker-left-hologram.png",
+      "bytes": 370552,
+      "compressed": false
+    },
+    {
+      "file": "/Users/mike/Work/kart/docs/screenshots/marker-right-hologram.png",
+      "bytes": 409508,
+      "compressed": false
+    },
+    {
+      "file": "/Users/mike/Work/kart/docs/screenshots/marker-mobile-hologram.png",
+      "bytes": 225826,
+      "compressed": false
+    }
+  ]
+}

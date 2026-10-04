@@ -1,0 +1,88 @@
+{
+  "success": true,
+  "errors": [],
+  "pixels": {
+    "original": [
+      128,
+      128,
+      128,
+      255
+    ],
+    "darkened": [
+      64,
+      64,
+      64,
+      255
+    ],
+    "withoutBloom": [
+      0,
+      0,
+      0,
+      255
+    ],
+    "withBloom": [
+      132,
+      132,
+      132,
+      255
+    ],
+    "clear": [
+      64,
+      64,
+      64,
+      255
+    ],
+    "behind": [
+      64,
+      64,
+      64,
+      255
+    ],
+    "inside": [
+      108,
+      95,
+      96,
+      255
+    ],
+    "foregroundClear": [
+      127,
+      34,
+      1,
+      255
+    ],
+    "foregroundCloud": [
+      127,
+      34,
+      1,
+      255
+    ],
+    "edgeClear": [
+      127,
+      34,
+      1,
+      255
+    ],
+    "edgeCloud": [
+      127,
+      34,
+      1,
+      255
+    ],
+    "backgroundClear": [
+      31,
+      24,
+      36,
+      255
+    ],
+    "backgroundCloud": [
+      109,
+      95,
+      95,
+      255
+    ],
+    "reducedSize": {
+      "width": 32,
+      "height": 24
+    }
+  }
+}

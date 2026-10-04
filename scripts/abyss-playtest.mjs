@@ -1,0 +1,61 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import { homedir } from 'node:os';
+import { fileURLToPath, pathToFileURL } from 'node:url';
+const {getBrowser,getPage,closeBrowser}=await import(pathToFileURL(path.join(homedir(),'.agents/skills/chrome-devtools/scripts/lib/browser.js')).href);
+const output=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../docs/screenshots');await fs.mkdir(output,{recursive:true});
+const browser=await getBrowser({headless:true,viewport:{width:1200,height:800},args:['--enable-unsafe-swiftshader']});
+const page=await getPage(browser),errors=[],checks={};
+page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
+const snapshot=()=>page.evaluate(()=>window.__VECTOR99__.snapshot());
+try{
+await page.goto('http://127.0.0.1:5173/',{waitUntil:'networkidle2'});
+await page.select('#stage-select','abyss');await page.waitForFunction(()=>window.__VECTOR99__.snapshot().stage==='abyss');
+checks.selection={stage:(await snapshot()).stage,title:await page.$eval('#stage-name',e=>e.textContent)};
+await page.screenshot({path:`${output}/abyss-title.png`});
+await page.click('#help-button');checks.help=await page.$eval('#stage-help',e=>e.textContent);await page.click('[data-close="help-dialog"]');
+for(const stage of ['foundry','abyss','foundry','abyss'])await page.select('#stage-select',stage);
+checks.switching=(await snapshot()).stage;
+await page.setViewport({width:390,height:844});
+await page.screenshot({path:`${output}/abyss-mobile.png`});
+checks.mobile=await page.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth,start:document.getElementById('start-button').getBoundingClientRect().toJSON(),selector:document.getElementById('stage-select').getBoundingClientRect().toJSON()}));
+await page.click('#start-button');await page.waitForFunction(()=>window.__VECTOR99__.snapshot().phase==='racing',{timeout:30000});checks.start=(await snapshot()).stage;
+await page.setViewport({width:960,height:600});
+await page.goto('http://127.0.0.1:5173/?stage=abyss&preview=drop',{waitUntil:'domcontentloaded'});
+await page.keyboard.down('w');
+await page.waitForFunction(()=>window.__VECTOR99__.snapshot().ships[0].dropFlight,{timeout:30000});
+checks.takeoff=(await snapshot()).ships[0];
+await page.waitForFunction(()=>window.__VECTOR99__.snapshot().ships[0].airborne>2.05,{timeout:30000});
+await page.screenshot({path:`${output}/abyss-drop.png`});
+checks.steeringBefore=await snapshot();await page.keyboard.down('d');
+await page.waitForFunction(()=>{const state=window.__VECTOR99__.snapshot();return state.landing&&Math.abs(state.landing.error)<7;},{timeout:30000});checks.steeringAfter=await snapshot();await page.keyboard.up('d');
+await page.keyboard.press('Escape');const paused=await snapshot();await new Promise(r=>setTimeout(r,350));checks.pause=paused.elapsed===(await snapshot()).elapsed&&paused.ships[0].airborne===(await snapshot()).ships[0].airborne;
+await page.click('#resume-button');await page.keyboard.down('w');
+await page.waitForFunction(()=>!window.__VECTOR99__.snapshot().ships[0].dropFlight,{timeout:30000});
+checks.landing=(await snapshot()).ships[0];await page.screenshot({path:`${output}/abyss-landing.png`});await page.keyboard.up('w');
+console.log(JSON.stringify({stage:'drop-complete',checks:checks.landing,errors}));
+await page.goto('http://127.0.0.1:5173/?stage=abyss&preview=pipe',{waitUntil:'domcontentloaded'});await page.keyboard.down('w');await page.keyboard.down('d');
+const beginning=await snapshot();await page.waitForFunction(()=>Math.abs(window.__VECTOR99__.snapshot().ships[0].x)>69,{timeout:30000});
+checks.ceiling=(await snapshot()).ships[0];await page.screenshot({path:`${output}/abyss-pipe-ceiling.png`});
+await page.waitForFunction(time=>window.__VECTOR99__.snapshot().elapsed>time+5.4,{timeout:30000},beginning.elapsed);
+checks.loop=(await snapshot()).ships[0];await page.keyboard.up('d');await page.keyboard.up('w');
+await page.goto('http://127.0.0.1:5173/?stage=abyss&preview=ceiling',{waitUntil:'networkidle2'});await page.screenshot({path:`${output}/abyss-ceiling-rewards.png`});
+checks.inverted=(await snapshot()).ships[0];
+checks.waves=[];
+for(const key of [null,'i','k']){
+  await page.goto('http://127.0.0.1:5173/?stage=abyss&preview=waves',{waitUntil:'domcontentloaded'});await page.keyboard.down('w');
+  await page.waitForFunction(()=>window.__VECTOR99__.snapshot().ships[0].airborne>.06,{timeout:30000});
+  const before=(await snapshot()).ships[0];
+  if(key){await page.keyboard.down(key);const controlStart=(await snapshot()).elapsed;await page.waitForFunction(t=>window.__VECTOR99__.snapshot().elapsed>t+.22,{timeout:30000},controlStart);await page.keyboard.up(key);}
+  const controlled=(await snapshot()).ships[0];
+  if(key==='i')await page.screenshot({path:`${output}/abyss-wave-flight.png`});
+  await page.waitForFunction(()=>window.__VECTOR99__.snapshot().ships[0].airborne===0,{timeout:30000});
+  const landed=(await snapshot()).ships[0];await page.keyboard.up('w');
+  checks.waves.push({key,before,controlled,landed});
+}
+console.log(JSON.stringify({stage:'waves-complete',errors,pitch:checks.waves.map(w=>({key:w.key,pitch:w.controlled.pitch,tilted:w.controlled.flightTilted,speed:w.controlled.speed,landing:w.landed.recovery}))}));
+await page.goto('http://127.0.0.1:5173/?stage=abyss&preview=finish',{waitUntil:'domcontentloaded'});await page.keyboard.down('w');await page.waitForSelector('#results-overlay:not([hidden])',{timeout:30000});await page.keyboard.up('w');
+checks.results=await page.$eval('#result-stage',e=>e.textContent);await page.click('#race-again-button');checks.restart={stage:(await snapshot()).stage,phase:(await snapshot()).phase};
+const success=errors.length===0&&checks.selection.stage==='abyss'&&checks.start==='abyss'&&checks.pause&&checks.landing.recovery===0&&checks.landing.airborne===0&&checks.landing.s>2024&&checks.ceiling.airborne===0&&checks.loop.recovery===0&&checks.loop.energy>90&&checks.mobile.width===checks.mobile.scroll&&checks.waves.every(w=>w.landed.recovery===0)&&checks.waves[1].controlled.flightTilted&&checks.waves[2].controlled.flightTilted&&checks.waves[1].controlled.pitch>checks.waves[2].controlled.pitch&&checks.results.includes('ABYSS RUN')&&checks.restart.phase==='countdown';
+console.log(JSON.stringify({success,errors,checks:{...checks,steeringBefore:{player:checks.steeringBefore.ships[0],landing:checks.steeringBefore.landing},steeringAfter:{player:checks.steeringAfter.ships[0],landing:checks.steeringAfter.landing}}},null,2));if(!success)process.exitCode=1;
+}finally{await closeBrowser();}
