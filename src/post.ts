@@ -5,6 +5,7 @@ import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
 import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { Atmosphere } from './atmosphere';
+import { DepthOfField } from './depth-of-field';
 
 /** Darken display brightness before adding light spill from the HDR accents. */
 export class NeonPost {
@@ -12,6 +13,7 @@ export class NeonPost {
   readonly grade: ShaderPass;
   readonly bloom: UnrealBloomPass;
   readonly atmosphere=new Atmosphere();
+  readonly dof=new DepthOfField();
   readonly camera:THREE.Camera;
 
   constructor(renderer: THREE.WebGLRenderer, scene: THREE.Scene, camera: THREE.Camera) {
@@ -21,7 +23,9 @@ export class NeonPost {
     target.depthTexture=new THREE.DepthTexture(1,1,THREE.UnsignedIntType);
     this.composer = new EffectComposer(renderer, target);
     this.composer.addPass(new RenderPass(scene, camera));
+    this.composer.addPass(this.dof.depthPass);
     this.composer.addPass(this.atmosphere.pass);
+    this.composer.addPass(this.dof);
     this.grade = new ShaderPass({
       name: 'SceneBrightness',
       uniforms: { tDiffuse: { value: null }, brightness: { value: .5 } },

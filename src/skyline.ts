@@ -72,12 +72,14 @@ function officeMaterial(){
       float band=step(.91,floorState)*step(.08,room);
       float scattered=step(1.0-vOfficeStyle.y*.10,room);
       float occupied=max(max(occupiedBlock,band),scattered)*step(.10,floorState);
+      // Retain half the occupied windows without changing the underlying patches.
+      occupied*=step(.5,officeHash(cell+vec2(157.0,419.0)));
       float tint=officeHash(officeBlock+vec2(61.0,29.0));
       vec3 officeLight=tint<.44?vec3(1.0,.78,.47):tint<.91?vec3(.70,.86,1.0):vec3(.60,.38,.85);
       diffuseColor.rgb*=mix(vec3(.065,.09,.14),vec3(.14,.19,.27),windowMask);
       totalEmissiveRadiance+=officeLight*windowMask*occupied*(2.2+block*3.0);`);
   };
-  material.customProgramCacheKey=()=> 'occupied-office-facades-v1';
+  material.customProgramCacheKey=()=> 'occupied-office-facades-v2';
   return material;
 }
 

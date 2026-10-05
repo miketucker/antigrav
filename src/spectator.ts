@@ -9,6 +9,7 @@ export class Spectator {
   readonly race:Race;
   readonly viewpoints:Viewpoint[]=[];
   readonly target=new THREE.Vector3();
+  readonly focusTarget=new THREE.Vector3();
   activeCamera=-1;
   cuts=0;
   targetFov=50;
@@ -82,6 +83,7 @@ export class Spectator {
     const aim=new THREE.Vector3();
     for(const ship of pack)aim.add(ship.position);
     aim.divideScalar(pack.length);
+    this.focusTarget.copy(aim);
     // Anticipate motion so the smooth pan keeps fast racers centered in the shot.
     aim.addScaledVector(leader.position.clone().sub(leader.previous),11);
     let nearest=0,distance=Infinity;

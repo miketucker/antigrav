@@ -77,6 +77,7 @@ export class World {
 
   setTrack(track:Track) {
     this.renderedStage=null;
+    this.post.dof.resetFocus();
     this.clearEffects();
     const geometries=new Set<THREE.BufferGeometry>(),materials=new Set<THREE.Material>(),textures=new Set<THREE.Texture>();
     this.course.traverse(object=>{if(object instanceof THREE.Mesh||object instanceof THREE.Points){if(object instanceof THREE.InstancedMesh)object.dispose();geometries.add(object.geometry);for(const material of Array.isArray(object.material)?object.material:[object.material]){materials.add(material);for(const value of Object.values(material))if(value instanceof THREE.Texture)textures.add(value);}}});
@@ -364,6 +365,7 @@ export class World {
   updateCamera(race:Race,dt:number,spectating=false){
     if(spectating){
       this.spectator.updateCamera(this.camera,dt);
+      this.post.dof.focusOn(this.camera,this.spectator.focusTarget,dt,`spectator-${this.spectator.activeCamera}`,true);
       return;
     }
     this.camera.clearViewOffset();this.camera.far=15000;
@@ -379,6 +381,7 @@ export class World {
     const up=new THREE.Vector3(0,1,0).lerp(normal,this.track.exterior||this.track.profile(ship.s).pipe>.02?1:this.cameraRoll).normalize();this.cameraUp.lerp(up,1-Math.exp(-dt*(this.track.exterior?7:5)));this.camera.up.copy(this.cameraUp);
     if(this.shake&&this.shakeAmount>0){this.camera.position.x+=(Math.random()-.5)*this.shakeAmount;this.camera.position.y+=(Math.random()-.5)*this.shakeAmount;this.shakeAmount=Math.max(0,this.shakeAmount-dt);}
     this.camera.lookAt(this.cameraTarget);const fov=67+ship.speed*.0275+(ship.boost>0?5:0);this.camera.fov=THREE.MathUtils.lerp(this.camera.fov,fov,1-Math.exp(-dt*3));this.camera.updateProjectionMatrix();
+    this.post.dof.focusOn(this.camera,mesh.position,race.phase==='paused'?0:dt,'chase',false);
   }
 
   clearEffects(){this.particles.length=0;this.wakes.forEach(wake=>wake.clear());this.exhaustTimers.fill(0);}
