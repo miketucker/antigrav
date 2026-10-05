@@ -4,8 +4,10 @@ import { Race, SHIP_SPEED, driftTier, type RaceEvent } from './race';
 import { ShipWake } from './wake';
 import { NeonPost } from './post';
 import { ENVIRONMENTS, environmentSky, mountainLandscape, abstractLandmarks } from './environment';
-import { PALETTE, roadTexture, hazardTexture, boostTexture, facadeTexture, facadeLightsTexture, signTexture, createShip, createPickup, glowMaterial } from './art';
-import { hologramChevrons } from './hologram';
+import { PALETTE, roadTexture, hazardTexture, boostTexture, signTexture, createShip, createPickup, glowMaterial } from './art';
+import { hologramArrow } from './hologram';
+import { Spectator } from './spectator';
+import { buildSkyline } from './skyline';
 
 interface Particle { position: THREE.Vector3; velocity: THREE.Vector3; life: number; max: number; color: THREE.Color }
 
@@ -32,6 +34,7 @@ export class World {
   readonly particleColors = new Float32Array(450 * 3);
   readonly cameraTarget = new THREE.Vector3();
   readonly cameraUp = new THREE.Vector3(0,1,0);
+  readonly spectator:Spectator;
   readonly ambient=new THREE.HemisphereLight();
   readonly sun=new THREE.DirectionalLight();
   sky:THREE.Group|null=null;
@@ -43,6 +46,7 @@ export class World {
 
   constructor(canvas: HTMLCanvasElement, track: Track) {
     this.track = track;
+    this.spectator=new Spectator(track);
     this.renderer = new THREE.WebGLRenderer({ canvas, antialias: false, powerPreference: 'high-performance' });
     this.renderer.outputColorSpace = THREE.SRGBColorSpace;
     this.renderer.info.autoReset = false;
@@ -78,6 +82,7 @@ export class World {
     this.course.traverse(object=>{if(object instanceof THREE.Mesh||object instanceof THREE.Points){if(object instanceof THREE.InstancedMesh)object.dispose();geometries.add(object.geometry);for(const material of Array.isArray(object.material)?object.material:[object.material]){materials.add(material);for(const value of Object.values(material))if(value instanceof THREE.Texture)textures.add(value);}}});
     geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());textures.forEach(t=>t.dispose());this.course.clear();
     this.pickups.clear();this.pads.length=0;this.boostRings.clear();this.markerVisuals.clear();this.track=track;
+    this.spectator.setTrack(track);
     this.buildTrack();this.buildScenery();
     this.post.atmosphere.setTrack(track);
     this.cameraUp.set(0,1,0);this.cameraTarget.copy(track.surface(9,-4.2).position);
@@ -223,7 +228,7 @@ export class World {
   buildChallenges(){
     const frame=(s:number,x:number)=>{const f=this.track.surface(s,x),group=new THREE.Group();group.position.copy(f.position);group.quaternion.setFromRotationMatrix(new THREE.Matrix4().makeBasis(f.right,f.normal,f.forward.clone().negate()));return group;};
     for(const marker of this.track.markers){
-      const group=frame(marker.s,marker.x);group.add(hologramChevrons(marker.side,marker.id*.73));
+      const group=frame(marker.s,marker.x);group.add(hologramArrow(marker.side,marker.id*.73));
       this.course.add(group);this.markerVisuals.set(marker.id,group);
     }
     const bodyMaterial=new THREE.MeshLambertMaterial({color:0x992b4a,map:hazardTexture(),flatShading:true}),danger=glowMaterial(0xff466c,9);
@@ -293,57 +298,14 @@ export class World {
   }
 
   buildScenery(){
-    let seed=123;const rand=()=>{seed=(Math.imul(seed,1664525)+1013904223)|0;return(seed>>>0)/4294967296;};
     const theme=ENVIRONMENTS[this.track.stage];
     this.ambient.color.setHex(theme.ambient);this.ambient.groundColor.setHex(theme.groundLight);this.ambient.intensity=theme.ambientIntensity;
     this.sun.color.setHex(theme.sunLight);this.sun.intensity=theme.sunIntensity;this.sun.position.set(...theme.sunDirection).multiplyScalar(1000);
     this.scene.background=new THREE.Color(theme.skyTop);
-    const abyss=this.track.stage!=='foundry',floor=-7000,cityZ=this.track.exterior?-500:abyss?-1000:0;
-    const ground=new THREE.Mesh(new THREE.PlaneGeometry(22000,22000),new THREE.MeshLambertMaterial({color:theme.haze}));ground.rotation.x=-Math.PI/2;ground.position.y=floor;this.course.add(ground);
-    const facade=facadeTexture(),lights=facadeLightsTexture();facade.repeat.y=lights.repeat.y=80;
-    const buildingMaterial=new THREE.MeshLambertMaterial({map:facade,color:this.track.theme?.city??0x8895af,flatShading:true,emissive:0xffffff,emissiveMap:lights,emissiveIntensity:6});
-    const buildingCount=theme.buildings,nearbyCount=theme.nearby;
-    const buildings=new THREE.InstancedMesh(new THREE.BoxGeometry(1,1,1),buildingMaterial,buildingCount);buildings.name='skyline-buildings';
-    const cityLines=new THREE.InstancedMesh(new THREE.BoxGeometry(1,1,1),glowMaterial(0xffffff,1),buildingCount*3);
-    const beacons=new THREE.InstancedMesh(new THREE.OctahedronGeometry(1),glowMaterial(0xff9460,10),buildingCount);
-    const matrix=new THREE.Matrix4();
-    for(let i=0;i<buildingCount;i++){
-      const angle=i/buildingCount*Math.PI*2+rand()*.05,radius=(abyss?1600:920)+rand()*900,top=(this.track.exterior?750:400)+rand()*(this.track.exterior?1450:1100),h=top-floor;
-      const rotation=new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0,1,0),rand()>.5?0:Math.PI/4),width=60+rand()*120,depth=60+rand()*120;
-      const position=new THREE.Vector3(Math.cos(angle)*radius,h/2+floor,Math.sin(angle)*radius+cityZ),clearance=Math.hypot(width,depth)/2+110;
-      if(this.track.stage==='oblivion'){
-        const sunAngle=Math.atan2(theme.sunDirection[0],theme.sunDirection[2]),heading=Math.atan2(position.x,position.z),delta=Math.atan2(Math.sin(heading-sunAngle),Math.cos(heading-sunAngle));
-        if(Math.abs(delta)<.25){const distance=Math.hypot(position.x,position.z),openAngle=sunAngle+(delta<0?-.34:.34);position.x=Math.sin(openAngle)*distance;position.z=Math.cos(openAngle)*distance;}
-      }
-      while(this.track.points.some(p=>Math.hypot(p.x-position.x,p.z-position.z)<clearance)){position.x+=Math.cos(angle)*100;position.z+=Math.sin(angle)*100;}
-      matrix.compose(position,rotation,new THREE.Vector3(width,h,depth));buildings.setMatrixAt(i,matrix);
-      buildings.setColorAt(i,new THREE.Color().setHSL(.64+rand()*.09,.13,.6+rand()*.2));
-      const neon=new THREE.Color(this.track.theme?(i%2?this.track.theme.secondary:this.track.theme.accent):[0x58d9ff,0x9a75ff,0xffad67][i%3]).multiplyScalar(8);
-      for(let line=0;line<3;line++){
-        const vertical=line===2;
-        const offset=vertical?new THREE.Vector3(width/2+.3,h*.075,0):new THREE.Vector3(0,h/2-2,(line?1:-1)*(depth/2+.3));
-        matrix.compose(offset.applyQuaternion(rotation).add(position),rotation,vertical?new THREE.Vector3(.7,h*.85,1.1):new THREE.Vector3(width*.85,.8,.9));
-        cityLines.setMatrixAt(i*3+line,matrix);cityLines.setColorAt(i*3+line,neon);
-      }
-      matrix.compose(new THREE.Vector3(position.x,h+floor+3,position.z),rotation,new THREE.Vector3(2.2,2.2,2.2));beacons.setMatrixAt(i,matrix);
-    }if(buildingCount)this.course.add(buildings,cityLines,beacons);
-    else{buildings.dispose();cityLines.dispose();beacons.dispose();buildings.geometry.dispose();cityLines.geometry.dispose();beacons.geometry.dispose();buildingMaterial.dispose();facade.dispose();lights.dispose();(cityLines.material as THREE.Material).dispose();(beacons.material as THREE.Material).dispose();}
-    for(let i=0;i<nearbyCount;i++){
-      const s=i/nearbyCount*this.track.length; if(!this.track.hasRoad(s))continue;const b=this.track.base(s),side=i%2?1:-1;
-      const horizontal=new THREE.Vector3(b.right.x,0,b.right.z);if(horizontal.lengthSq()<.01)horizontal.set(1,0,0);horizontal.normalize();
-      const position=b.position.clone().addScaledVector(horizontal,side*(this.track.exterior?180:90)+rand()*70);
-      for(let attempt=0;attempt<8;attempt++){
-        if(!this.track.points.some(p=>Math.hypot(p.x-position.x,p.z-position.z)<145))break;
-        position.addScaledVector(horizontal,side*75);
-      }
-      const top=b.position.y+45+rand()*90,height=top-floor;
-      const tower=new THREE.Mesh(new THREE.BoxGeometry(36,height,48),buildingMaterial);tower.name='trackside-tower';tower.position.set(position.x,(top+floor)/2,position.z);this.course.add(tower);
-      const towerHeight=(tower.geometry.parameters as {height:number}).height;
-      const light=new THREE.Mesh(new THREE.BoxGeometry(.7,towerHeight*.85,.7),glowMaterial(this.track.theme?.accent??(i%2?0xffad67:0x66e5e9),7));light.position.copy(tower.position).add(new THREE.Vector3(18.3,towerHeight*.075,24.3));this.course.add(light);
-      if(i%3===0){const sign=new THREE.Mesh(new THREE.PlaneGeometry(22,6),new THREE.MeshBasicMaterial({map:signTexture(['APEX ENERGY','ZERO / G','ORBITAL','VECTOR 99'][i%4],i%2?'#ff9a6c':'#d6ff45'),side:THREE.DoubleSide}));sign.position.set(position.x,top-12,position.z);sign.lookAt(b.position);this.course.add(sign);}
-    }
+    const ground=new THREE.Mesh(new THREE.PlaneGeometry(22000,22000),new THREE.MeshLambertMaterial({color:theme.haze}));ground.rotation.x=-Math.PI/2;ground.position.y=-7000;this.course.add(ground);
+    this.course.add(buildSkyline(this.track,theme));
     if(theme.mountains!=='none')this.course.add(mountainLandscape(this.track,theme));
-    if(theme.abstract!=='none')this.course.add(abstractLandmarks(this.track,theme));
+    if(theme.abstract!=='none'){const landmarks=abstractLandmarks(this.track,theme);this.course.add(landmarks);}
     this.sky=environmentSky(theme);this.course.add(this.sky);
   }
 
@@ -357,8 +319,10 @@ export class World {
 
   update(race:Race,dt:number,alpha:number){
     this.time+=dt;
+    const spectating=race.phase==='menu';
+    if(spectating)race=this.spectator.race;
     const effectsDt=race.phase==='paused'?0:dt;
-    for(const ship of race.ships){const mesh=this.ships[ship.id];mesh.visible=(race.phase!=='menu'||ship.id===0)&&(ship.recovery<=0||Math.sin(this.time*22)>0);mesh.scale.setScalar(1);mesh.position.copy(ship.previous).lerp(ship.position,alpha);mesh.quaternion.copy(ship.rotation);
+    for(const ship of race.ships){const mesh=this.ships[ship.id];mesh.visible=race.phase!=='menu'&&(ship.recovery<=0||Math.sin(this.time*22)>0);mesh.scale.setScalar(1);mesh.position.copy(ship.previous).lerp(ship.position,alpha);mesh.quaternion.copy(ship.rotation);
       const f=this.track.surface(ship.s,ship.x),shadow=this.shadows[ship.id];shadow.visible=mesh.visible&&!ship.falling&&this.track.hasRoad(ship.s)&&race.phase!=='menu';shadow.position.copy(f.position).addScaledVector(f.normal,.08);shadow.quaternion.setFromRotationMatrix(new THREE.Matrix4().makeBasis(f.right,f.forward,f.normal));const spread=1+ship.airHeight*.025;shadow.scale.set(spread,1.5*spread,1);
       for(const side of [-1,1]){const flame=mesh.getObjectByName(`flame${side}`) as THREE.Mesh;flame.visible=ship.speed>2||race.phase==='menu';flame.scale.y=(ship.boost>0?2.6:.55+ship.speed/SHIP_SPEED*.8)+Math.sin(this.time*43+ship.id)*.12;(flame.material as THREE.MeshBasicMaterial).color.setHex(ship.boost>0?0xd6ff45:0x77efff).multiplyScalar(8);
         const core=mesh.getObjectByName(`engineCore${side}`) as THREE.Mesh;core.visible=flame.visible;core.scale.y=ship.boost>0?1.7:1;
@@ -392,17 +356,18 @@ export class World {
     for(const p of this.particles){p.life-=effectsDt;p.position.addScaledVector(p.velocity,effectsDt);p.velocity.y-=effectsDt*8;}this.particles.splice(0,this.particles.length,...this.particles.filter(p=>p.life>0));
     this.particles.forEach((p,i)=>{const fade=Math.min(1,p.life/p.max)*6;this.particlePositions.set([p.position.x,p.position.y,p.position.z],i*3);this.particleColors.set([p.color.r*fade,p.color.g*fade,p.color.b*fade],i*3);});
     this.particleMesh.geometry.setDrawRange(0,this.particles.length);this.particleMesh.geometry.attributes.position.needsUpdate=true;this.particleMesh.geometry.attributes.color.needsUpdate=true;
-    this.updateCamera(race,dt);
+    this.updateCamera(race,dt,spectating);
     this.sky?.position.copy(this.camera.position);
     this.renderer.info.reset();this.post.render(effectsDt);this.renderedStage=this.track.stage;
   }
 
-  updateCamera(race:Race,dt:number){
-    if(race.phase==='menu'){
-      const b=this.track.surface(112,0);this.ships[0].position.copy(b.position).addScaledVector(b.normal,2.2);this.ships[0].scale.setScalar(2.2);this.ships[0].quaternion.setFromRotationMatrix(new THREE.Matrix4().makeBasis(b.right,b.normal,b.forward.clone().negate()));
-      const orbit=.4*Math.sin(this.time*.15);const pos=b.position.clone().addScaledVector(b.forward,21).addScaledVector(b.right,21+orbit).addScaledVector(b.normal,9);
-      this.camera.position.copy(pos);const target=b.position.clone().addScaledVector(b.right,13).addScaledVector(b.normal,2);this.camera.up.set(0,1,0);this.camera.lookAt(target);this.camera.fov=58;this.camera.updateProjectionMatrix();return;
+  updateCamera(race:Race,dt:number,spectating=false){
+    if(spectating){
+      this.spectator.updateCamera(this.camera,dt);
+      return;
     }
+    this.camera.clearViewOffset();this.camera.far=15000;
+    this.post.atmosphere.pass.uniforms.hazeDensity.value=ENVIRONMENTS[this.track.stage].hazeDensity;
     const ship=race.player,f=this.track.surface(ship.s,ship.x),mesh=this.ships[0];
     const forward=ship.dropFlight?ship.flightVelocity.clone().normalize():f.forward;
     const normal=ship.dropFlight?new THREE.Vector3(0,1,0):f.normal;

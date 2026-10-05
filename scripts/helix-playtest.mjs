@@ -12,13 +12,13 @@ const elapsedWait=async(seconds)=>{const beginning=(await snapshot()).elapsed;aw
 const preview=async(name)=>{await page.goto(`http://127.0.0.1:5173/?stage=helix&preview=${name}`,{waitUntil:'domcontentloaded'});await page.waitForFunction(()=>!!window.__VECTOR99__,{timeout:30000});};
 try{
   await page.goto('http://127.0.0.1:5173/?stage=helix',{waitUntil:'networkidle2'});
-  checks.selection={stage:(await snapshot()).stage,title:await page.$eval('#stage-name',e=>e.textContent),number:await page.$eval('#stage-number',e=>e.textContent)};
+  checks.selection={stage:(await snapshot()).stage,title:await page.$eval('.course-option.selected>span',e=>e.textContent)};
   await page.screenshot({path:`${output}/helix-title.png`});
   await page.click('#help-button');checks.help=await page.$eval('#stage-help',e=>e.textContent);await page.click('[data-close="help-dialog"]');
   checks.switching=[];
-  for(const stage of ['foundry','abyss','helix']){await page.select('#stage-select',stage);await page.waitForFunction(s=>window.__VECTOR99__.snapshot().stage===s,{},stage);checks.switching.push((await snapshot()).stage);}
+  for(const stage of ['foundry','abyss','helix']){await page.click(`[data-stage="${stage}"]`);await page.waitForFunction(s=>window.__VECTOR99__.snapshot().stage===s,{},stage);checks.switching.push((await snapshot()).stage);}
   await page.setViewport({width:390,height:844});await page.screenshot({path:`${output}/helix-mobile.png`});
-  checks.mobile=await page.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth,start:document.getElementById('start-button').getBoundingClientRect().toJSON(),selector:document.getElementById('stage-select').getBoundingClientRect().toJSON()}));
+  checks.mobile=await page.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth,start:document.getElementById('start-button').getBoundingClientRect().toJSON(),selector:document.getElementById('course-grid').getBoundingClientRect().toJSON()}));
   await page.click('#start-button');await page.waitForFunction(()=>window.__VECTOR99__.snapshot().phase==='racing',{timeout:30000});checks.start=(await snapshot()).stage;
   await page.setViewport({width:960,height:600});
   checks.hops=[];
@@ -53,7 +53,7 @@ try{
   }
   await preview('finish');await page.keyboard.down('w');await page.waitForSelector('#results-overlay:not([hidden])',{timeout:30000});await page.keyboard.up('w');
   checks.results=await page.$eval('#result-stage',e=>e.textContent);await page.click('#race-again-button');checks.restart={stage:(await snapshot()).stage,phase:(await snapshot()).phase};
-  const success=errors.length===0&&checks.selection.stage==='helix'&&checks.selection.number==='03 / 07'&&checks.start==='helix'&&checks.pause&&checks.hops.every(h=>h.flying.airborne>0&&h.landed.airborne===0&&h.landed.recovery===0)&&checks.roll.underside&&checks.roll.travel>Math.PI*56&&checks.roll.player.recovery===0&&checks.mobile.width===checks.mobile.scroll&&checks.pitch.every(p=>p.controlled.flightTilted&&p.landed.recovery===0)&&checks.results.includes('HELIX CROWN')&&checks.restart.phase==='countdown';
+  const success=errors.length===0&&checks.selection.stage==='helix'&&checks.start==='helix'&&checks.pause&&checks.hops.every(h=>h.flying.airborne>0&&h.landed.airborne===0&&h.landed.recovery===0)&&checks.roll.underside&&checks.roll.travel>Math.PI*56&&checks.roll.player.recovery===0&&checks.mobile.width===checks.mobile.scroll&&checks.pitch.every(p=>p.controlled.flightTilted&&p.landed.recovery===0)&&checks.results.includes('HELIX CROWN')&&checks.restart.phase==='countdown';
   const report={success,errors,checks};await fs.writeFile(path.resolve(output,'helix-playtest.json'),JSON.stringify(report,null,2));
   console.log(JSON.stringify({success,errors,selection:checks.selection,roll:checks.roll,hops:checks.hops,pitch:checks.pitch.map(p=>({key:p.key,pitch:p.controlled.pitch,speed:p.controlled.speed,land:p.landed.airborne,recovery:p.landed.recovery})),results:checks.results,restart:checks.restart},null,2));if(!success)process.exitCode=1;
 }finally{await closeBrowser();}

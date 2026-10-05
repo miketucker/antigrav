@@ -10,15 +10,15 @@ page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()
 const snapshot=()=>page.evaluate(()=>window.__VECTOR99__.snapshot());
 try{
 await page.goto('http://127.0.0.1:5173/',{waitUntil:'networkidle2'});
-await page.select('#stage-select','abyss');await page.waitForFunction(()=>window.__VECTOR99__.snapshot().stage==='abyss');
-checks.selection={stage:(await snapshot()).stage,title:await page.$eval('#stage-name',e=>e.textContent)};
+await page.click(`[data-stage="${'abyss'}"]`);await page.waitForFunction(()=>window.__VECTOR99__.snapshot().stage==='abyss');
+checks.selection={stage:(await snapshot()).stage,title:await page.$eval('.course-option.selected>span',e=>e.textContent)};
 await page.screenshot({path:`${output}/abyss-title.png`});
 await page.click('#help-button');checks.help=await page.$eval('#stage-help',e=>e.textContent);await page.click('[data-close="help-dialog"]');
-for(const stage of ['foundry','abyss','foundry','abyss'])await page.select('#stage-select',stage);
+for(const stage of ['foundry','abyss','foundry','abyss'])await page.click(`[data-stage="${stage}"]`);
 checks.switching=(await snapshot()).stage;
 await page.setViewport({width:390,height:844});
 await page.screenshot({path:`${output}/abyss-mobile.png`});
-checks.mobile=await page.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth,start:document.getElementById('start-button').getBoundingClientRect().toJSON(),selector:document.getElementById('stage-select').getBoundingClientRect().toJSON()}));
+checks.mobile=await page.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth,start:document.getElementById('start-button').getBoundingClientRect().toJSON(),selector:document.getElementById('course-grid').getBoundingClientRect().toJSON()}));
 await page.click('#start-button');await page.waitForFunction(()=>window.__VECTOR99__.snapshot().phase==='racing',{timeout:30000});checks.start=(await snapshot()).stage;
 await page.setViewport({width:960,height:600});
 await page.goto('http://127.0.0.1:5173/?stage=abyss&preview=drop',{waitUntil:'domcontentloaded'});

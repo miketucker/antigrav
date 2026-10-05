@@ -27,18 +27,18 @@ try{
     if(['abyss','rift'].includes(stage))assert(s.environment.mountains,`${stage}: dramatic peaks`);
     if(['helix','vortex'].includes(stage))assert(s.environment.abstract===2,`${stage}: instanced sculptures`);
     if(['abyss','slalom','vortex'].includes(stage))assert(s.environment.stars==='Points',`${stage}: night stars`);
-    if(s.environment.signs.length)assert(s.environment.signs.every(sign=>sign.width>16&&sign.height===12&&sign.children===1&&sign.shader==='ShaderMaterial'&&sign.transparent&&!sign.depthWrite),'Floating holographic double chevrons without boards or poles');
+    if(s.environment.signs.length)assert(s.environment.signs.every(sign=>sign.width>16&&sign.height===18&&sign.children===1&&sign.shader==='ShaderMaterial'&&sign.transparent&&!sign.depthWrite),'Floating holographic corner arrows without boards or poles');
     checks.stages.push({stage,environment:s.environment,skyline:s.skyline,atmosphere:s.atmosphere});await shot(`environment-${stage}`);console.log(JSON.stringify({progress:stage,errors}));
   }
   for(const side of ['left','right']){
     await go('slalom','marker'+side);const info=await page.$eval('#marker-status',e=>({side:e.dataset.side,text:e.textContent,label:e.getAttribute('aria-label'),arrow:e.querySelector('svg')?.getBoundingClientRect().width,transform:getComputedStyle(e.querySelector('svg')).transform}));
-    assert(info.side===side&&info.text===''&&info.label.startsWith(`Pass ${side},`)&&info.arrow>=78,'Large text-free chevron with accessible matching HUD direction');
+    assert(info.side===side&&info.text===''&&info.label.startsWith(`Pass ${side},`)&&info.arrow>=78,'Large corner arrow with accessible matching HUD direction');
     checks.markers.push(info);await shot(`marker-${side}-hologram`);const before=await snapshot();await new Promise(r=>setTimeout(r,180));assert((await snapshot()).environment.signs[0].time===before.environment.signs[0].time,'Hologram animation pauses');
   }
   // Reuse one world across every theme; repeat the cycle to catch undisposed sky/star assets.
   await go('foundry');
   for(let round=0;round<2;round++)for(const stage of ['abyss','helix','rift','slalom','vortex','oblivion','driftlab','foundry']){
-    await page.select('#stage-select',stage);await page.waitForFunction(id=>window.__VECTOR99__.snapshot().rendering.stage===id,{timeout:90000},stage);
+    await page.click(`[data-stage="${stage}"]`);await page.waitForFunction(id=>window.__VECTOR99__.snapshot().rendering.stage===id,{timeout:90000},stage);
     await new Promise(r=>setTimeout(r,150));const s=await snapshot();checks.switches.push({round,stage,geometries:s.environment.geometries,textures:s.environment.textures});
   }
   for(const stage of ['foundry','abyss','helix','slalom','rift','vortex','oblivion','driftlab']){

@@ -11,7 +11,7 @@ npm install
 npm run dev
 ```
 
-Open the local URL printed by Vite. Use the circuit selector to choose one of eight circuits, then choose **Start Race** for a three-lap race. Direct links use `/?stage=foundry`, `abyss`, `helix`, `slalom`, `rift`, `vortex`, `oblivion`, or `driftlab`.
+Open the local URL printed by Vite. Use the course grid to choose one of eight circuits, then choose **Start Race** for a three-lap race. The menu shows a compact spline for each course and an AI race watched by four fixed spectator cameras that pan with the pack, smoothly zoom to hold its size in frame, and cut to the nearest viewpoint. Direct links use `/?stage=foundry`, `abyss`, `helix`, `slalom`, `rift`, `vortex`, `oblivion`, or `driftlab`.
 
 ```sh
 npm test
@@ -54,7 +54,7 @@ Touch controls appear on devices with a coarse pointer, including DRIFT and UP/D
 - **Oblivion Circuit** is the red/gold final exam: 70° banks, four offset gaps (roughly 228–245 units), decks narrowing from 24 to 18 units, three tunnels, exterior ramps and loops, and the densest barriers and markers.
 - These four circuits use rounded corners, tangent-aligned loop connectors and separated spiral turns. Return roads carry alternating boost/pickup lines and occasional barriers. Every jump has three runway boosts, 140 units apart, with clear landing decks. CPU pilots commit to short banked drifts when there is enough room to slide.
 - **Drift Lab** is a flat 24-unit-wide ribbon of repeated, rounded zigzags with open edges. Hold Shift and steer into each bend, straighten your heading, then release Shift for a turbo on the exit. Ordinary steering has less authority on this deliberately slippery course. Missed turns produce a visible fall and a checkpoint reset; falling freezes lap progress and cancels drift charge. There are no tubes, jumps, hazards, pickups or boost pads. Five CPU pilots use the same handling and must drift to stay on the road.
-- On the four expansion circuits, pass **left of cyan holographic chevrons** and **right of amber holographic chevrons**. A wrong-side pass cuts both nominal and boosted top speed to 80%. Five consecutive correct markers restore full power; another miss resets the recovery streak. A large text-free chevron on the HUD shows the next direction; the speed caption and race notices report power recovery. Flying far above a marker counts as a miss. Every racer follows the same rules.
+- On the four expansion circuits, pass **left of cyan holographic corner arrows** and **right of amber holographic corner arrows**. A wrong-side pass cuts both nominal and boosted top speed to 80%. Five consecutive correct markers restore full power; another miss resets the recovery streak. A large corner arrow on the HUD shows the next direction; the speed caption and race notices report power recovery. Flying far above a marker counts as a miss. Every racer follows the same rules.
 - Dodge red blocks on roads and tunnel walls. Swept collisions catch high-speed impacts and drain energy. Jump gaps contain no road geometry: a missed landing returns you to a safe approach checkpoint, and landing checkpoints validate only after touchdown.
 - Ships now run at twice the original speed: 140 nominal and 192 boosted simulation units. Acceleration, braking, steering response, and rockets are tuned for that pace.
 - A damped anti-gravity cushion compresses and rebounds above the road. Crests and ramp lips lift ships into flight before gravity and the track field bring them back to a cushioned landing.
@@ -64,7 +64,7 @@ Touch controls appear on devices with a coarse pointer, including DRIFT and UP/D
 
 The scene renders at full viewport resolution (up to 2× device pixel ratio), with a 50% brightness grade and HDR bloom. The eight environments have distinct skies, lighting, haze and silhouettes: industrial dusk on Foundry, moonlit peaks on Abyss, floating violet polyhedra on Helix, a dark neon city on Slalom, monumental snowy mountains beneath a muted red sky on Rift, starry blue orbital rings on Vortex, a golden sunrise on Oblivion, and a sparse cyan night void on Drift Lab. The mountains use original faceted geometry; floating sculptures are instanced and stars use a single point batch.
 
-City courses retain large, sparse skyscrapers with half as many window slots per texture tile. Other environments reduce or replace the city. Buildings extend down to −7000 world units and disappear into height haze. Clouds remain depth-clipped 3D volumes that racers can fly through, but render at half resolution with six ray samples, one noise octave, and at most four nearby volumes. A depth-aware composite keeps foreground track edges clear; height haze and the rest of the scene stay at full resolution. Cloud motion pauses with the game. Bloom can be toggled in settings. Directional markers are floating double chevrons with no boards, poles or text. Their additive transparent hologram shader adds scanlines, restrained flicker and a moving light band; bloom gives them a luminous edge. Passed markers dim, animation pauses with the game, and the HUD repeats the text-free shape with an accessible direction label.
+City courses have varied office blocks, slim towers, rounded facades and stepped crowns. Procedural windows form independently occupied office patches, dark floors and bright horizontal bands, with different window spacing and occupancy for each tower. White and warm office lights are mixed with restrained colored accents. Other environments reduce or replace the city. Buildings extend down to −7000 world units and disappear into height haze. Clouds remain depth-clipped 3D volumes that racers can fly through, but render at half resolution with six ray samples, one noise octave, and at most four nearby volumes. A depth-aware composite keeps foreground track edges clear; height haze and the rest of the scene stay at full resolution. Cloud motion pauses with the game. Bloom can be toggled in settings. Directional markers are floating corner arrows with no boards, poles or text. Their additive transparent hologram shader adds scanlines, restrained flicker and a moving light band; bloom gives them a luminous edge. Passed markers dim, animation pauses with the game, and the HUD repeats the text-free shape with an accessible direction label.
 
 ## Project structure
 
@@ -76,9 +76,11 @@ City courses retain large, sparse skyscrapers with half as many window slots per
 - `src/post.ts`: 50% scene-brightness grade, HDR bloom, and final color output.
 - `src/atmosphere.ts`: half-resolution cloud ray marching, depth-aware compositing and full-resolution height haze.
 - `src/environment.ts`: eight sky/lighting presets, faceted mountains, stars and instanced floating sculptures.
-- `src/hologram.ts`: floating double-chevron geometry and its animated scanline shader.
+- `src/hologram.ts`: floating corner-arrow geometry and its animated scanline shader.
 - `src/wake.ts`: bounded, fading twin-engine exhaust ribbons.
-- `src/ui.ts` and `src/style.css`: title, briefing, HUD, minimap, stage selection, landing guidance, settings, pause, and results.
+- `src/ui.ts` and `src/style.css`: course grid, briefing, HUD, minimap, stage selection, landing guidance, settings, pause, and results.
+- `src/spectator.ts`: autonomous menu racing, four fixed replay cameras, tracking, framing-based zoom and automatic cuts.
+- `src/skyline.ts`: varied instanced towers, procedural office lighting and continuous course clearance checks.
 - `src/audio.ts`: synthesized engines, electronic soundtrack, and game sounds.
 - `src/main.ts`: inputs and the interpolated 60 Hz simulation loop.
 
@@ -98,6 +100,6 @@ Course-theme browser QA is recorded in `docs/screenshots/course-themes-playtest.
 
 Spline regression tests check nonadjacent clearance, heading changes, surface continuity across roads and tunnel walls, reward spacing and jump runways. Run `npx tsx scripts/spline-audit.ts` to regenerate `docs/screenshots/spline-audit.json` and the route/elevation diagram `spline-map.svg`. Original measurements are saved in `spline-audit-before.json`. `scripts/spline-playtest.mjs` checks the rebuilt connectors and return roads, player drifting, all nine keyboard jump landings and two tunnel ramp hops; its report is `docs/screenshots/spline-playtest.json`.
 
-Environment and marker browser QA is recorded in `docs/screenshots/environment-playtest.json`; `scripts/environment-playtest.mjs` checks all eight environments, holographic chevrons, cloud resolution and pause, repeated course switching, Retina sizing and mobile layout. `scripts/fog-performance.mjs` measures synchronized isolated rendering under headless Chrome, with before/after reports in `docs/screenshots/`; these timings are comparative and do not represent hardware frame rates.
+Environment and marker browser QA is recorded in `docs/screenshots/environment-playtest.json`; `scripts/environment-playtest.mjs` checks all eight environments, holographic corner arrows, cloud resolution and pause, repeated course switching, Retina sizing and mobile layout. `scripts/fog-performance.mjs` measures synchronized isolated rendering under headless Chrome, with before/after reports in `docs/screenshots/`; these timings are comparative and do not represent hardware frame rates.
 
 Drift Lab simulation checks in `tests/drift-lab.test.ts` cover flatness and route separation, timely versus normal/late/reversed steering, ballistic edge falls, progress-safe checkpoint resets, and three-lap CPU completion with drift turbos at every difficulty. `scripts/drift-lab-playtest.mjs` checks course selection, a keyboard drift release through the normal input handler, visible falling and recovery; its report and screenshots are in `docs/screenshots/`.

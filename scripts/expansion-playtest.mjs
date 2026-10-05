@@ -22,8 +22,8 @@ try{
     await fs.writeFile(`${output}/expansion-playtest.json`,JSON.stringify({success:true,errors,checks,sizes},null,2));console.log(JSON.stringify({success:true,errors,finalLandings:checks.finalLandings},null,2));
   }else{
   if(!process.env.QA_AFTER_TUNNEL){
-  await go('helix');checks.options=await page.$$eval('#stage-select option',es=>es.map(e=>e.value));assert(checks.options.length===7,'Seven selectable circuits');checks.selection=[];
-  for(const stage of checks.options){await page.select('#stage-select',stage);const state=await snapshot();checks.selection.push({stage:state.stage,number:await page.$eval('#stage-number',e=>e.textContent),clouds:state.atmosphere.clouds.length});assert(state.stage===stage,'Selection rebuilds track');}
+  await go('helix');checks.options=await page.$$eval('[data-stage]',es=>es.map(e=>e.dataset.stage));assert(checks.options.length===8,'Eight selectable circuits');checks.selection=[];
+  for(const stage of checks.options){await page.click(`[data-stage="${stage}"]`);const state=await snapshot();checks.selection.push({stage:state.stage,clouds:state.atmosphere.clouds.length});assert(state.stage===stage,'Selection rebuilds track');}
   await shot('oblivion-title');await page.click('#help-button');checks.help=await page.$eval('#stage-help',e=>e.textContent);assert(checks.help.includes('five consecutive'),'Marker instructions');await page.click('[data-close="help-dialog"]');
   await page.setViewport({width:390,height:844});await shot('seven-circuits-mobile');checks.mobile=await page.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth,start:document.getElementById('start-button').getBoundingClientRect().toJSON()}));assert(checks.mobile.width===checks.mobile.scroll,'Mobile menu fits');
   await page.click('#start-button');await page.waitForFunction(()=>window.__VECTOR99__.snapshot().phase==='racing',{timeout:90000});assert((await snapshot()).stage==='oblivion','New stage starts');await page.keyboard.press('Escape');await page.setViewport({width:960,height:600});

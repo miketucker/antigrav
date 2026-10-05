@@ -6,9 +6,7 @@ import '@fontsource/barlow-condensed/latin-600.css';
 import '@fontsource/barlow-condensed/latin-700.css';
 import '@fontsource/barlow-condensed/latin-800.css';
 import '@fontsource/barlow-condensed/latin-800-italic.css';
-import '@fontsource/barlow-condensed/latin-900-italic.css';
 import './style.css';
-import type { InstancedMesh } from 'three';
 import { Track, STAGES, clamp, type StageId } from './track';
 import { Race, HOVER_HEIGHT, driftTier, type Controls } from './race';
 import { World } from './scene';
@@ -35,14 +33,13 @@ let last=performance.now(),accumulator=0;
 let uiClock=0;
 let settingsPaused=false;
 
-document.getElementById('stage-select')!.addEventListener('change',e=>{
+ui.onSelectStage=stage=>{
   if(race.phase!=='menu')return;
-  const stage=(e.target as HTMLSelectElement).value as StageId;
   if(stage===track.stage)return;
   track=new Track(stage);race.track=track;race.reset(false);world.setTrack(track);ui.setTrack(track);ui.update(race,0);
   keys.clear();touch.clear();pendingUse=false;accumulator=0;
   const url=new URL(location.href);url.searchParams.set('stage',stage);url.searchParams.delete('preview');history.replaceState(null,'',url);
-});
+};
 
 const start = async()=>{
   document.querySelectorAll<HTMLDialogElement>('dialog').forEach(d=>d.close());
@@ -56,7 +53,6 @@ const pause=()=>{race.pause();keys.clear();touch.clear();pendingUse=false;ui.upd
 for(const id of ['start-button','help-start-button','restart-button','race-again-button'])document.getElementById(id)!.addEventListener('click',start);
 for(const id of ['resume-button','pause-button'])document.getElementById(id)!.addEventListener('click',pause);
 for(const id of ['quit-button','results-quit-button'])document.getElementById(id)!.addEventListener('click',quit);
-document.getElementById('home-link')!.addEventListener('click',e=>{e.preventDefault();if(race.phase==='menu')return;pause();});
 document.getElementById('help-button')!.addEventListener('click',()=>{(document.getElementById('help-dialog') as HTMLDialogElement).showModal();});
 document.getElementById('settings-button')!.addEventListener('click',()=>{
   settingsPaused=race.phase==='racing'||race.phase==='countdown';if(settingsPaused)pause();
@@ -106,7 +102,16 @@ function frame(now:number){
   const dt=clamp((now-last)/1000,0,.08);last=now;
   accumulator+=dt;
   const input=controls();pendingUse||=input.use;
-  while(accumulator>=1/60){race.step(1/60,{...input,use:pendingUse});pendingUse=false;for(const event of race.events){world.burst(event);ui.event(event);audio.event(event);}accumulator-=1/60;}
+  while(accumulator>=1/60){
+    if(race.phase==='menu'){
+      world.spectator.step(1/60);
+      for(const event of world.spectator.race.events)world.burst({...event,player:false});
+    }else{
+      race.step(1/60,{...input,use:pendingUse});
+      for(const event of race.events){world.burst(event);ui.event(event);audio.event(event);}
+    }
+    pendingUse=false;accumulator-=1/60;
+  }
   world.update(race,dt,accumulator*60);
   uiClock+=dt;if(uiClock>1/20){ui.update(race,uiClock);uiClock=0;}
   audio.update(race.player.speed,race.player.boost>0,race.phase==='racing',dt);
@@ -134,5 +139,5 @@ ui.update(race,0);requestAnimationFrame(frame);
 
 // Read-only diagnostics for development and repeatable simulation tests.
 if(import.meta.env.DEV){
-  Object.defineProperty(window,'__VECTOR99__',{value:{snapshot:()=>({phase:race.phase,stage:track.stage,openEdges:track.openEdges,curvature:track.curvature(race.player.s),curvatureAhead:track.curvature(race.player.s+35),roadWidth:track.profile(race.player.s).width,drop:track.drop?{start:track.drop.start,end:track.drop.end,landingEnd:track.drop.landingEnd}:null,pipe:track.pipe,pipes:track.pipes,gaps:track.gaps,markers:track.markers,barriers:track.barriers,exterior:track.exterior,ramps:track.ramps,flats:track.flats,banks:track.banks,bankAngle:track.bankAngle(race.player.s),boostChains:track.boostChains,rings:track.rings,ringBoosts:[...race.ringTimers.keys()],tubeBend:track.tubeBend(race.player.s),tubeShape:track.tubeShape(race.player.s),environment:{name:world.sky?.userData.theme,theme:world.track.stage,stars:world.course.getObjectByName('night-stars')?.type,mountains:!!world.course.getObjectByName('faceted-mountains'),abstract:world.course.getObjectByName('abstract-landmarks')?.children.length??0,ambient:world.ambient.intensity,sun:world.sun.intensity,geometries:world.renderer.info.memory.geometries,textures:world.renderer.info.memory.textures,signs:[...world.markerVisuals.values()].map(group=>{const icon=group.getObjectByName('direction-chevron') as import('three').Mesh<import('three').ShapeGeometry,import('three').ShaderMaterial>;icon.geometry.computeBoundingBox();const box=icon.geometry.boundingBox!;return {width:box.max.x-box.min.x,height:box.max.y-box.min.y,children:group.children.length,shader:icon.material.type,transparent:icon.material.transparent,depthWrite:icon.material.depthWrite,time:icon.material.uniforms.time.value,intensity:icon.material.uniforms.intensity.value};})},skyline:{buildings:(world.course.getObjectByName('skyline-buildings') as InstancedMesh)?.count,nearby:world.course.children.filter(o=>o.name==='trackside-tower').length},atmosphere:{clouds:world.post.atmosphere.clouds.map(c=>({center:c.center.toArray(),size:c.size.toArray()})),time:world.post.atmosphere.time,quality:world.post.atmosphere.quality,activeClouds:world.post.atmosphere.pass.uniforms.cloudCount.value,cloudWidth:world.post.atmosphere.pass.cloudTarget.width,cloudHeight:world.post.atmosphere.pass.cloudTarget.height,towerBase:world.post.atmosphere.towerBase,depthWidth:world.post.composer.readBuffer.depthTexture?.image.width,depthHeight:world.post.composer.readBuffer.depthTexture?.image.height},surfaceNormal:track.surface(race.player.s,race.player.x).normal.toArray(),elapsed:race.elapsed,trackLength:track.length,ships:race.ships.map(s=>({id:s.id,s:s.s,x:s.x,yaw:s.yaw,speed:s.speed,laps:s.laps,checkpoint:s.checkpoint,item:s.item,boost:s.boost,energy:s.energy,drifting:s.drifting,driftCharge:s.driftCharge,driftTier:driftTier(s.driftCharge),markerPenalty:s.markerPenalty,markerStreak:s.markerStreak,markerPassed:s.markerPassed,markerMissed:s.markerMissed,pitch:s.pitch,flightTilted:s.flightTilted,dropFlight:s.dropFlight,falling:s.falling,recovery:s.recovery,position:s.position.toArray(),airborne:s.airborne,airHeight:s.airHeight,hoverHeight:s.hoverHeight,hoverVelocity:s.hoverVelocity,aiPace:s.aiPace,launches:s.launches,finish:s.finish})),rockets:race.rockets.length,mines:race.mines.length,trailVertices:world.wakes.reduce((total,wake)=>total+wake.mesh.geometry.drawRange.count,0),particles:world.particles.length,rendering:{stage:world.renderedStage,width:world.renderer.domElement.width,height:world.renderer.domElement.height,pixelRatio:world.renderer.getPixelRatio(),brightness:world.post.grade.uniforms.brightness.value,bloom:world.post.bloom.enabled,composerWidth:world.post.composer.readBuffer.width,composerHeight:world.post.composer.readBuffer.height},landing:race.landingPrediction(race.player),camera:{position:world.camera.position.toArray(),direction:world.camera.getWorldDirection(world.camera.position.clone()).toArray()},drawCalls:world.renderer.info.render.calls,triangles:world.renderer.info.render.triangles})},writable:false});
+  Object.defineProperty(window,'__VECTOR99__',{value:{snapshot:()=>({phase:race.phase,stage:track.stage,openEdges:track.openEdges,curvature:track.curvature(race.player.s),curvatureAhead:track.curvature(race.player.s+35),roadWidth:track.profile(race.player.s).width,drop:track.drop?{start:track.drop.start,end:track.drop.end,landingEnd:track.drop.landingEnd}:null,pipe:track.pipe,pipes:track.pipes,gaps:track.gaps,markers:track.markers,barriers:track.barriers,exterior:track.exterior,ramps:track.ramps,flats:track.flats,banks:track.banks,bankAngle:track.bankAngle(race.player.s),boostChains:track.boostChains,rings:track.rings,ringBoosts:[...race.ringTimers.keys()],tubeBend:track.tubeBend(race.player.s),tubeShape:track.tubeShape(race.player.s),spectator:{active:race.phase==='menu',camera:world.spectator.activeCamera,cuts:world.spectator.cuts,fov:world.camera.fov,targetFov:world.spectator.targetFov,framing:world.spectator.framing,elapsed:world.spectator.race.elapsed,viewpoints:world.spectator.viewpoints.map(v=>({s:v.s,position:v.position.toArray()})),ships:world.spectator.race.ships.map(s=>({id:s.id,speed:s.speed,s:s.s,position:s.position.toArray(),recovery:s.recovery})),visible:world.ships.filter(s=>s.visible).length},environment:{name:world.sky?.userData.theme,theme:world.track.stage,stars:world.course.getObjectByName('night-stars')?.type,mountains:!!world.course.getObjectByName('faceted-mountains'),abstract:world.course.getObjectByName('abstract-landmarks')?.children.length??0,ambient:world.ambient.intensity,sun:world.sun.intensity,geometries:world.renderer.info.memory.geometries,textures:world.renderer.info.memory.textures,signs:[...world.markerVisuals.values()].map(group=>{const icon=group.getObjectByName('direction-arrow') as import('three').Mesh<import('three').ShapeGeometry,import('three').ShaderMaterial>;icon.geometry.computeBoundingBox();const box=icon.geometry.boundingBox!;return {width:box.max.x-box.min.x,height:box.max.y-box.min.y,children:group.children.length,shader:icon.material.type,transparent:icon.material.transparent,depthWrite:icon.material.depthWrite,time:icon.material.uniforms.time.value,intensity:icon.material.uniforms.intensity.value};})},skyline:{...world.course.getObjectByName('skyline-buildings')?.userData},atmosphere:{clouds:world.post.atmosphere.clouds.map(c=>({center:c.center.toArray(),size:c.size.toArray()})),time:world.post.atmosphere.time,quality:world.post.atmosphere.quality,activeClouds:world.post.atmosphere.pass.uniforms.cloudCount.value,cloudWidth:world.post.atmosphere.pass.cloudTarget.width,cloudHeight:world.post.atmosphere.pass.cloudTarget.height,towerBase:world.post.atmosphere.towerBase,depthWidth:world.post.composer.readBuffer.depthTexture?.image.width,depthHeight:world.post.composer.readBuffer.depthTexture?.image.height},surfaceNormal:track.surface(race.player.s,race.player.x).normal.toArray(),elapsed:race.elapsed,trackLength:track.length,ships:race.ships.map(s=>({id:s.id,s:s.s,x:s.x,yaw:s.yaw,speed:s.speed,laps:s.laps,checkpoint:s.checkpoint,item:s.item,boost:s.boost,energy:s.energy,drifting:s.drifting,driftCharge:s.driftCharge,driftTier:driftTier(s.driftCharge),markerPenalty:s.markerPenalty,markerStreak:s.markerStreak,markerPassed:s.markerPassed,markerMissed:s.markerMissed,pitch:s.pitch,flightTilted:s.flightTilted,dropFlight:s.dropFlight,falling:s.falling,recovery:s.recovery,position:s.position.toArray(),airborne:s.airborne,airHeight:s.airHeight,hoverHeight:s.hoverHeight,hoverVelocity:s.hoverVelocity,aiPace:s.aiPace,launches:s.launches,finish:s.finish})),rockets:race.rockets.length,mines:race.mines.length,trailVertices:world.wakes.reduce((total,wake)=>total+wake.mesh.geometry.drawRange.count,0),particles:world.particles.length,rendering:{stage:world.renderedStage,width:world.renderer.domElement.width,height:world.renderer.domElement.height,pixelRatio:world.renderer.getPixelRatio(),brightness:world.post.grade.uniforms.brightness.value,bloom:world.post.bloom.enabled,composerWidth:world.post.composer.readBuffer.width,composerHeight:world.post.composer.readBuffer.height},landing:race.landingPrediction(race.player),camera:{position:world.camera.position.toArray(),direction:world.camera.getWorldDirection(world.camera.position.clone()).toArray()},drawCalls:world.renderer.info.render.calls,triangles:world.renderer.info.render.triangles})},writable:false});
 }

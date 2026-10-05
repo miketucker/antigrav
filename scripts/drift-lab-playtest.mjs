@@ -21,8 +21,8 @@ const go=async preview=>{
   await page.$eval('#game-canvas',e=>e.focus());
 };
 try{
-  await go();checks.menu=await page.evaluate(()=>({count:document.querySelector('#stage-select').options.length,number:document.querySelector('#stage-number').textContent,name:document.querySelector('#stage-name').textContent,help:document.querySelector('#stage-help').textContent}));
-  assert(checks.menu.count===8&&checks.menu.number==='08 / 08'&&checks.menu.name==='DRIFT LAB','Eighth selectable circuit');
+  await go();checks.menu=await page.evaluate(()=>({count:document.querySelectorAll('[data-stage]').length,name:document.querySelector('.course-option.selected>span').textContent,help:document.querySelector('#stage-help').textContent}));
+  assert(checks.menu.count===8&&checks.menu.name==='DRIFT LAB','Eighth selectable circuit');
   assert(checks.menu.help.includes('open edge'),'Briefing explains the falling hazard');await shot('drift-lab-menu');
   await go('drift');await page.waitForFunction(()=>window.__VECTOR99__.snapshot().elapsed>.08);await page.keyboard.press('Escape');
   await page.waitForFunction(()=>window.__VECTOR99__.snapshot().phase==='paused');checks.start=await snapshot();

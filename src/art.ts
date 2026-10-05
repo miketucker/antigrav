@@ -54,27 +54,6 @@ export function shipTexture(color: number) {
   });
 }
 
-export function facadeTexture() {
-  return canvasTexture(64, ctx => {
-    ctx.fillStyle = '#58627e'; ctx.fillRect(0, 0, 64, 64);
-    ctx.fillStyle = '#434b68'; for (let x = 0; x < 64; x += 16) ctx.fillRect(x, 0, 2, 64);
-    for (let y = 4; y < 64; y += 10) for (let x = 5; x < 64; x += 32) {
-      ctx.fillStyle = (x + y) % 3 ? '#7d869f' : '#d7b987'; ctx.fillRect(x, y, 6, 3);
-    }
-  });
-}
-
-export function facadeLightsTexture() {
-  return canvasTexture(64, ctx => {
-    ctx.fillStyle = '#000000'; ctx.fillRect(0, 0, 64, 64);
-    for (let y = 4; y < 64; y += 10) for (let x = 5; x < 64; x += 32) {
-      if ((Math.floor(x/32)+Math.floor(y/10))%4===0) {
-        ctx.fillStyle = (x + y) % 3 ? '#66e5e9' : '#ffad67'; ctx.fillRect(x, y, 6, 3);
-      }
-    }
-  });
-}
-
 export function signTexture(text: string, color = '#d6ff45', subtitle = '') {
   const canvas = document.createElement('canvas'); canvas.width = 256; canvas.height = 64;
   const ctx = canvas.getContext('2d')!; ctx.fillStyle = '#192033'; ctx.fillRect(0, 0, 256, 64);
